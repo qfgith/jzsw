@@ -1,0 +1,92 @@
+{extend name="base" /}
+{block name="body"}
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">管理员列表</h3>
+                </div>
+                <!-- search -->
+                <div class="panel-body mb0">
+                    <div class="navbar navbar-default mb0">
+                        <form class="navbar-form form-inline" method="post" action="{:url('admin/admin/index')}">
+                            <div class="form-group">
+                                <label class="control-label">登录名/真实姓名:</label>
+                                <div class="input-group">
+                                    <input class="form-control input-sm" name="keywords" value="{$keywords}" type="text" >
+                                </div>
+
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fa fa-search"></i> 筛选
+                                </button>
+
+                            </div>
+                            <a href="{:url('admin/admin/add')}" class="btn btn-info pull-right">添加</a>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <table class="table no-margin">
+                            <thead>
+                                <tr role="row">
+                                    <th>登录账号</th>
+                                    <th>真实姓名</th>
+                                    <th>最后登录时间</th>
+                                    <th>最后登录ip</th>
+                                    <th>是否启用</th>
+                                    <th>操作</th>
+                               </tr>
+                            </thead>
+                            <tbody>
+                                {foreach name="list" item="vo" key="k"}
+                                    <tr role="row">
+                                        <td>{$vo.name}</td>
+                                        <td>{$vo.realname}</td>
+                                        <td>{$vo.last_login|date="Y-m-d H:i",###}</td>
+                                        <td>{$vo.last_ip}</td>
+                                        <td>
+                                            {if condition="$vo['id'] gt 1"}
+                                                {if condition="$vo['status'] gt 1"}
+                                                    <a href="{:url('admin/admin/savestatus',['act'=>'status0','id'=>$vo.id])}" onclick="return confirm('确定停用吗?')" class="btn btn-sm btn-success">启用</a>
+                                                {else/}
+                                                    <a href="{:url('admin/admin/savestatus',['act'=>'status1','id'=>$vo.id])}" onclick="return confirm('确定启用吗?')" class="btn btn-sm btn-danger">停用</a>
+                                                {/if}
+                                            {else/}
+                                                <a href="#" class="btn btn-sm btn-gray">
+                                                    {eq name="vo.status" value="1"}启用{else/}停用{/eq}
+                                                </a>
+                                            {/if}
+
+                                        </td>
+                                        <td>
+                                            <a href="{:url('admin/admin/edit',['id'=>$vo['id']])}" class="btn btn-sm btn-primary">编辑</a>
+                                            {if condition="$vo['id'] gt 1"}
+                                            <a href="{:url('admin/admin/delete',['id'=>$vo['id']])}" onclick="return confirm('确定删除吗?')" class="btn btn-sm btn-danger" >删除</a>
+                                            {else/}
+                                            <a href="#" class="btn btn-sm btn-gray">
+                                                删除
+                                            </a>
+                                            {/if}
+                                        </td>
+                                    </tr>
+                                {/foreach}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="box-footer clearfix">
+                    <ul class="pagination pagination-sm pull-right">
+                        {$pages}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+</section>
+{/block}

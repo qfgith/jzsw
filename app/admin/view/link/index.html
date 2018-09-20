@@ -1,0 +1,55 @@
+{extend name="base" /}
+{block name="body"}
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">链接管理</h3>
+                </div>
+                <!-- search -->
+                <div class="panel-body mb0">
+                    <div class="navbar navbar-default mb0">
+                        <div class="navbar-form form-inline">
+                            <a href="{:url('admin/link/add',['cid'=>$cate_id])}" class="btn btn-info">添加链接</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <table class="table no-margin">
+                            <thead>
+                                <tr role="row">
+                                    <th>ID</th>
+                                    <th>名称</th>
+                                    <th>图片</th>
+                                    <th>状态</th>
+                                    <th>操作</th>
+                               </tr>
+                            </thead>
+                            <tbody>
+                                {volist name="list" id="vo" key="k"}
+                                <tr role="row">
+                                    <td>{$k}</td>
+                                    <td>{$vo.name}</td>
+                                    <td>{notempty name="vo.image"}<img src="{$cdomain}{$vo.image}" class="mw100h50">{/notempty}</td>
+                                    <td>{eq name="vo.status" value="1"}<label class="btn btn-sm btn-success">显示{else/}<label class="btn btn-sm btn-danger">隐藏{/eq}</label></td>
+                                    <td>
+                                        <a href="{:url('admin/link/edit',['id'=>$vo['id']])}" class="btn btn-sm btn-primary">编辑</a>
+                                         <a href='{:url("admin/link/delete",["id"=>$vo["id"]])}' onclick="return confirm('确定删除吗?')" lay-filter="*" class="btn btn-xs btn-danger">删除</a>
+                                    </td>
+                                </tr>
+                                {/volist}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+{/block}

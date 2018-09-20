@@ -1,0 +1,50 @@
+<div class="footer">
+    <div class="containers">
+        <div class="footer_box">
+            <div class="footer_logo hidden-xs"><img src="__GX__/asset/images/logo2.png" alt=""></div>
+            <div class="footer_cont">
+                <p><span>邮箱：juzhang@163.com</span><span>电话：13603063271</span><span>公司地址：云南省昆明市呈贡区春融街779号上海东盟大厦A座406室</span></p>
+                <p>云南巨漳生物科技有限公司版权所有<a href="##">www.jzsw.com.cn</a>粤ICP备130812345号-1 法律声明</p>
+            </div>
+            <div class="footer_QRcode hidden-xs">
+                <span>扫码关注我们</span>
+                <img src="__GX__/asset/images/QRcode.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="__GX__/asset/js/jquery-3.2.1.js"></script>
+<script src="__GX__/asset/js/bootstrap.min.js"></script>
+<script src="__GX__/asset/js/swiper.min.js"></script>
+<script>
+    $(function(){
+        $('.header_pnav >ul >li,.header_pnav2').mouseover(function(){
+            $(this).siblings('li').find('.header_pnav2').stop().slideUp();
+            $(this).find('.header_pnav2').stop().slideDown();
+        })
+        $('.header_pnav').mouseleave(function(){
+            $('.header_pnav2').stop().slideUp();
+        })
+        $(window).resize(function(){
+            // 响应首页
+            var winW = $(window).width();
+            if(winW < 1200){
+                $('.containers').addClass('container').removeClass('containers');
+            }else{
+                $('.container').addClass('containers').removeClass('container');
+            }
+        }).trigger('resize')
+
+    })
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
+</body>
+</html>

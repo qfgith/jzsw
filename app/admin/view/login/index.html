@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>平台管理后台-{$webset['site_name']}</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.6 -->
+        <link rel="stylesheet" href="{$cdomain}__PTSTA__/bootstrap/css/bootstrap.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="{$cdomain}__PTSTA__/bootstrap/css/font-awesome.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="{$cdomain}__PTSTA__/bootstrap/css/ionicons.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="{$cdomain}__PTSTA__/dist/css/AdminLTE.min.css">
+        <!-- iCheck -->
+        <link rel="stylesheet" href="{$cdomain}__PTSTA__/plugins/iCheck/square/blue.css">
+        
+    </head>
+    <body class="hold-transition login-page">
+        <div class="abdiv">
+            <h3><b>{$webset['site_name']}</b></h3>
+            <div class="log_form_div">
+                <p class="login-box-msg">登录</p>
+                <form method="post" action="{:url('admin/Login/login')}">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name" placeholder="用户名">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="pwd" placeholder="密码">
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <div class="checkbox icheck">
+                                <label>
+                                    <input type="checkbox"> 记住我
+                                </label>
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-xs-4">
+                            <!--  btn btn-primary btn-block btn-flat -->
+                            <button class="btn btn-primary btn-block btn-flat" lay-submit lay-filter="*" >登录</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /.login-box -->
+        
+        <!-- jQuery 2.2.3 -->
+        <script src="{$cdomain}__PTSTA__/dist/js/jquery.min.js"></script>
+        <!-- Bootstrap 3.3.6 -->
+        <script src="{$cdomain}__PTSTA__/bootstrap/js/bootstrap.js"></script>
+        <!-- iCheck -->
+        <script src="{$cdomain}__PTSTA__/plugins/iCheck/icheck.min.js"></script>
+        <script>
+            // 定义全局JS变量
+            var GV = {
+                current_controller: "admin/{$controller|default=''}/",
+                base_url: "__STATIC__"
+            };
+
+            $(function () {
+                var h1 = window.innerHeight;
+                $("body").height(h1);
+                $('input[name=name]').focus();
+                $('input').iCheck({
+                    checkboxClass: 'icheckbox_square-blue',
+                    radioClass: 'iradio_square-blue',
+                    increaseArea: '20%' // optional
+                });
+            });
+        </script>
+        <!--JS引用-->
+        
+        <link rel="stylesheet" href="{$cdomain}__PTSTA__/plugins/layui230/css/layui.css" media="all">
+        <script src="{$cdomain}__PTSTA__/plugins/layui230/layui.all.js"></script>
+        <script src="{$cdomain}__PTSTA__/dist/js/app.min.js"></script>
+        <script>
+            /**
+             * 通用表单提交(AJAX方式)
+             */
+            layui.use('form', function(){
+                var form = layui.form;
+                //各种基于事件的操作，下面会有进一步介绍
+                form.on('submit(*)', function(data){
+                    $.ajax({
+                        url: data.form.action,
+                        type: data.form.method,
+                        data: $(data.form).serialize(),
+                        success: function (info) {
+                            if (info.code === 1) {
+                                setTimeout(function () {
+                                    location.href = info.url;
+                                }, 1000);
+                            }
+                            layer.msg(info.msg);
+                        }
+                    });
+                    return false;
+                });
+
+            });
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="__GX__/asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__GX__/asset/css/swiper.min.css">
+    <link rel="stylesheet" href="__GX__/asset/css/startStyle.css">
+    <link rel="stylesheet" href="__GX__/asset/css/index.css">
+    <title>工业大麻</title>
+</head>
+<body>
+<div class="header">
+    <div class="containers hidden-xs">
+        <div class="header_pc">
+            <div class="header_plogo"><a href="{:url('/')}"><img src="__GX__/asset/images/logo.jpg" alt=""></a></div>
+            <div class="header_pnav">
+                <ul>
+                    <li class="active">
+                        <div class="header_pnav1"><a href="{:url('/')}">首页</a></div>
+                    </li>
+                    <li>
+                        <div class="header_pnav1"><a href="{:url('/about')}">关于我们</a></div>
+                        <div class="header_pnav2">
+                            <ul>
+                                {volist name='secondnav' id='v'}
+                                <li><a href="{:url('about',['cid'=>$v['id']])}">{$v['name']}</a></li>
+                                {/volist}
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="header_pnav1"><a href="./product_center.html">产品中心</a></div>
+                        <div class="header_pnav2">
+                            <ul>
+                                <li><a href="./product_center.html">产品中心</a></li>
+                                <li><a href="./product_center.html">产品中心</a></li>
+                                <li><a href="./product_center.html">产品中心</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="header_pnav1"><a href="./yanjiufazhan.html">研究发展</a></div>
+                        <div class="header_pnav2">
+                            <ul>
+                                <li><a href="./yanjiufazhan.html">研究发展</a></li>
+                                <li><a href="./yanjiufazhan.html">研究发展</a></li>
+                                <li><a href="./yanjiufazhan.html">研究发展</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="header_pnav1"><a href="./news_center.html">新闻资讯</a></div>
+                        <div class="header_pnav2">
+                            <ul>
+                                <li><a href="./news_center.html">新闻资讯</a></li>
+                                <li><a href="./news_center.html">新闻资讯</a></li>
+                                <li><a href="./news_center.html">新闻资讯</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="header_pnav1"><a href="./maxueyuan.html">麻学院</a></div>
+                        <div class="header_pnav2">
+                            <ul>
+                                <li><a href="./maxueyuan.html">麻学院</a></li>
+                                <li><a href="./maxueyuan.html">麻学院</a></li>
+                                <li><a href="./maxueyuan.html">麻学院</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="header_pnav1"><a href="./renliziyuan.html">人力资源</a></div>
+                        <div class="header_pnav2">
+                            <ul>
+                                <li><a href="./renliziyuan.html">人力资源</a></li>
+                                <li><a href="./contactus.html">联系我们</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="header_language">
+                <a href="./index.html" class="lan_cn active">中文</a>
+                <a href="./index.html" class="lan_en">EN</a>
+                <span class="header_languagebg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="headerMB  hidden-sm hidden-md hidden-lg">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="header_language">
+                        <a href="./index.html" class="lan_cn active">中文</a>
+                        <a href="./index.html" class="lan_en">EN</a>
+                        <span class="header_languagebg"></span>
+                    </div>
+                    <a class="navbar-brand hidden-sm hidden-md hidden-lg" href="./index.html">
+                        <img src="__GX__/asset/images/logo.jpg" alt="" class="img-responsive">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="./index.html">首页</a></li>
+
+                        <li>
+                            <a href="./aboutus.html">关于我们</a>
+                            <p><a href="./ab_compintro.html">公司简介</a></p>
+                            <p><a href="./aboutus.html">董事长致辞</a></p>
+                            <p><a href="./ab_teams.html">公司团队</a></p>
+                        </li>
+
+                        <li>
+                            <a href="./product_center.html">产品中心</a>
+                            <p><a href="./product_center.html">产品中心</a></p>
+                            <p><a href="./product_center.html">产品中心</a></p>
+                        </li>
+                        <li>
+                            <a href="./yanjiufazhan.html">研究发展</a>
+                            <p><a href="./yanjiufazhan.html">研究发展</a></p>
+                            <p><a href="./yanjiufazhan.html">研究发展</a></p>
+                        </li>
+                        <li>
+                            <a href="./news_center.html">新闻资讯</a>
+                            <p><a href="./news_center.html">新闻资讯</a></p>
+                            <p><a href="./news_center.html">新闻资讯</a></p>
+                        </li>
+                        <li>
+                            <a href="./maxueyuan.html">麻学院</a>
+                            <p><a href="./maxueyuan.html">麻学院</a></p>
+                            <p><a href="./maxueyuan.html">麻学院</a></p>
+                        </li>
+                        <li>
+                            <a href="./renliziyuan.html">人力资源</a>
+                            <p><a href="./renliziyuan.html">人力资源</a></p>
+                            <p><a href="./contactus.html">联系我们</a></p>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>

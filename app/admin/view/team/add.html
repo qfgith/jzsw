@@ -1,0 +1,140 @@
+
+{extend name="base" /}
+{block name="body"} 
+<!-- Main content -->
+<section class="content">
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+        <div class="info_box">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">详细信息</h3>
+                    </div>
+                    {$info1.ueditor}
+                    <form id="form1" method="post" action="{:url('admin/Team/save')}">
+                        <input type="hidden" name="id" value="" />
+                        <div class="panel mt20">
+                            <div class="panel-body">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td id="box">上级栏目</td>
+                                        <td >
+                                             <select name="cid" lay-verify="required" class='col-sm-4 form-control select2'>
+                                               
+                                                {foreach name="category_level_list" item="vo"}
+                                                <option value="{$vo.id}" {if condition="$vo['child'] eq 1"}disabled="disabled"{/if} >{neq name="vo.level" value="1"}|{php}for($i=1;$i<$vo['level'];$i++){echo ' ----';}{/php}{/neq} {$vo.name}</option>
+                                                {/foreach}
+                                            </select>
+
+                                           
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td id="box">标题</td>
+                                        <td >
+                                            <input type="text" name="title" value="" required  lay-verify="required" placeholder="标题" class="form-control">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="box">英文名</td>
+                                        <td >
+                                            <input type="text" name="title1" value="" required  lay-verify="required" placeholder="英文名" class="form-control">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="box">职位</td>
+                                        <td >
+                                            <input type="text" name="title2" value="" required  lay-verify="required" placeholder="职位" class="form-control">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="box">邮箱</td>
+                                        <td >
+                                            <input type="text" name="email" value="" required  lay-verify="required" placeholder="邮箱" class="form-control">
+                                        </td>
+                                    </tr>
+                                    <!-- <tr>
+                                        <td id="box"> 略缩图 </td>
+                                        <td >
+                                            <input type="text" name="thumb" id="img" size="50" class="layui-input input-text">
+                                            <button type="button" class="btn btn-primary layui_upimage">上传图片</button>
+                                            <img src="" class="th1_img imgh">
+                                        </td>
+                                    </tr> -->
+                             
+                                     <tr>
+                                        <td id="box">介绍</td>
+                                        <td >
+                                            <textarea class="form-control" name="content" rows="10" ></textarea>
+                                        </td>
+                                    </tr>
+
+                                    
+                                    
+                                    <!-- <tr>
+                                        <td id="box">图集</td>
+                                        <td >
+                                           {$info1['uphoto']}
+                                        </td>
+                                    </tr> -->
+                                     
+
+                                     <!-- <tr>
+                                        <td id="box">详情介绍</td>
+                                        <td >
+                                           {$info1['ucontent']}
+                                        </td>
+                                    </tr> -->
+                                 
+
+                                    <tr>
+                                        <td id="box"> 状态 </td>
+                                        <td >
+                                            <input type="radio" class='iccontrol' name="status" value="1" title="已审核" checked="checked"><span class="ml10 mr30">已审核</span>
+                                            <input type="radio" class='iccontrol' name="status" value="0" title="未审核"><span class="ml10 mr30">未审核</span>
+                                        </td>
+                                    </tr>
+
+                                   
+                                    <tr>
+                                        <td id="box"> 推荐到首页 </td>
+                                        <td >
+                                            <input type="radio" class='iccontrol' name="is_pos" value="0" title="否" checked="checked"><span class="ml10 mr30">否</span>
+                                            <input type="radio" class='iccontrol' name="is_pos" value="1" title="是"><span class="ml10 mr30">是</span>
+                                        </td>
+                                    </tr>
+
+                                
+
+                                   
+                                 
+                                    
+                                   
+
+                                    <tr>
+                                        <td class="col-sm-2"></td>
+                                        <td class="col-sm-8 text-right">
+                                            <input class="btn btn-primary" type="submit" lay-submit lay-filter="*" value="保存">
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+</section>
+
+{/block} 
+
+
+

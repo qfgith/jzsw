@@ -1,0 +1,95 @@
+{extend name="base" /}
+{block name="body"}
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info info_box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">提现信息</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <!--表单数据-->
+                    <form method="post" id="adminHandle" action="">
+                    <input type="hidden" name="id" value="{$info.id}">
+                    <div class="tab-content col-md-10">                       
+                        <div class="tab-pane active" id="tab_tongyong">                           
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td class="col-sm-2">用户名：</td>
+                                    <td class="col-sm-8">{$info.user_id|getFval="im_user","user_name",###}</td>
+                                </tr>  
+                                <tr>
+                                    <td>提现单号：</td>
+                                    <td>{$info.order_sn}</td>
+                                </tr>
+                                <tr>
+                                    <td>提现金额：</td>
+                                    <td>{$info.money}</td>
+                                </tr>
+                                <tr>
+                                    <td>提现银行：</td>
+                                    <td>{$info.bank_cardno}({$info.bank_name})</td>
+                                </tr>
+                                <tr>
+                                    <td>申请时间：</td>
+                                    <td>{$info.addtime|date="Y-m-d H:i",###}</td>
+                                </tr>
+                                <tr>
+                                    <td>处理状态：</td>
+                                    <td>{$info.ustatus}</td>
+                                </tr>
+                                {if condition="($info['type'] eq '1')"}
+                                    {if condition="($info['state']==2)"}
+                                        <tr class="restr distab">
+                                    {else/}
+                                        <tr class="restr ">
+                                    {/if}
+                                        <td>处理凭证：</td>
+                                        <td>
+                                            <input type="text" name="eimg" value="{$info.eimg}" size="40" class="layui-input input-text">
+                                            <button type="button" class="btn btn-primary layui_upimage" >上传图片</button>
+                                            {empty name="info.eimg"}<img src="" class="th1_img imgh">{else/}<img src="{$cdomain}{$info.eimg}" class="th1_img imgb">{/empty}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>处理备注：</td>
+                                        <td><textarea name="deal_msg" class="form-control">{$info.deal_msg}</textarea></td>
+                                    </tr>
+                                {/if}
+                                <tr>
+                                    <td></td>
+                                    <td class="text-right">
+                                        <!-- <input type="submit" value="submit"> -->
+                                        <button class="btn btn-primary" lay-submit lay-filter="*" >保存</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>                           
+                    </div>              
+                    </form><!--表单数据-->
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    $(function(){
+        // 提现处理完成，需上传处理凭证
+        $('.radio_state').on('ifChecked', function(event){  
+            var i = $(this).val();
+            if(i == 2){
+                $(".restr").addClass("distab");
+            }else{
+                $(".restr").removeClass("distab");
+            }
+        });  
+        // 提现处理完成，处理状态不可改
+        var state = "{$info.state}";
+        if(state == 2){
+            $(".radio_state").attr("disabled", true);
+        }
+    })
+</script>
+{/block}

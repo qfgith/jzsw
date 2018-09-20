@@ -1,0 +1,124 @@
+
+{extend name="base" /}
+{block name="body"} 
+<!-- Main content -->
+<section class="content">
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+        <div class="info_box">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">详细信息</h3>
+                    </div>
+                    {$info1.ueditor}
+                    <form id="form1" method="post" action="{:url('admin/Page/save')}">
+                        <input type="hidden" name="id" value="" />
+                        <div class="panel mt20">
+                            <div class="panel-body">
+                                <table class="table table-bordered">
+
+                                    <tr>
+                                        <td id="box">标题</td>
+                                        <td >
+                                            <input type="text" name="title" value="" required  lay-verify="required" placeholder="标题" class="form-control">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="box">小标题</td>
+                                        <td >
+                                            <input type="text" name="title1" value="" required  lay-verify="required" placeholder="小标题" class="form-control">
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td id="box"> 描述 </td>
+                                        <td >
+                                            <textarea class="form-control" name="introduction" rows="3"></textarea>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td id="box"> 略缩图 </td>
+                                        <td >
+                                            <input type="text" name="thumb" id="img" size="50" class="layui-input input-text">
+                                            <button type="button" class="btn btn-primary layui_upimage">上传图片</button>
+                                            <img src="" class="th1_img imgh">
+                                        </td>
+                                    </tr>
+                                    
+                                     
+
+                                     <tr>
+                                        <td id="box">详情介绍</td>
+                                        <td >
+                                           {$info1['ucontent']}
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td id="box"> 状态 </td>
+                                        <td >
+                                            <input type="radio" class='iccontrol' name="status" value="1" title="已审核" checked="checked"><span class="ml10 mr30">已审核</span>
+                                            <input type="radio" class='iccontrol' name="status" value="0" title="未审核"><span class="ml10 mr30">未审核</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td id="box"> 是否删除 </td>
+                                        <td >
+                                            <input type="radio" class='iccontrol' name="isdel" value="0" title="否" checked="checked"><span class="ml10 mr30">否</span>
+                                            <input type="radio" class='iccontrol' name="isdel" value="1" title="是"><span class="ml10 mr30">是</span>
+                                        </td>
+                                    </tr>
+
+                                 
+                                    
+                                   
+
+                                    <tr>
+                                        <td class="col-sm-2"></td>
+                                        <td class="col-sm-8 text-right">
+                                            <input class="btn btn-primary" type="submit" lay-submit lay-filter="*" value="保存">
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+</section>
+
+{/block} 
+
+
+
+
+
+
+
+
+
+
+
+{block name="js"}
+<script src="__JS__/kindeditor/kindeditor.config.js"></script>
+<script src="__JS__/kindeditor/kindeditor-all-min.js"></script>
+{/block}
+{block name="script"}
+<script>
+    KindEditor.ready(function(K) {
+        K.create('#content', KindEditorOptions);
+    });
+</script>
+{/block}

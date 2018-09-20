@@ -1,0 +1,70 @@
+{extend name="base" /}
+{block name="body"}    
+<!-- Main content -->
+<section class="content">
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">幻灯片列表</h3>
+                </div>
+                <!-- search -->
+                <div class="panel-body mb0">
+                    <div class="navbar navbar-default mb0">
+                        <form class="navbar-form form-inline" method="post" action="">
+
+                            <!-- <a href='{:url("Admin/SlideCategory/add")}' class="btn btn-info pull-right">添加幻灯片</a> -->
+                        </form>
+                    </div>
+                </div>
+                <!-- table -->
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <form id="myform" name="myform" action='{:url("Admin/SlideCategory/listorder")}' method="post">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>编号/ID</th>
+                                    <th>分类名</th>
+                                    <th>操作</th>
+                                    <th>管理</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                
+                                
+                                {volist name='slide_category_list' id='vo'}
+                                <tr>
+                                    
+                                    <td>{$vo['id']}</td>
+                                    <td>{$vo['name']}</td>
+                                    <td>
+                                        <a href='{:url("Admin/Slide/index",["cate_id"=>$vo["id"]])}' class="btn btn-xs btn-primary">图片管理</a>
+                                    </td>
+                                    <td>
+                                        <a href='{:url("Admin/SlideCategory/edit",["id"=>$vo["id"]])}' class="btn btn-xs btn-primary">编辑</a>
+                                        <a href='{:url("Admin/SlideCategory/delete",["id"=>$vo["id"]])}' onclick="return confirm('确定删除吗?')" lay-filter="*" class="btn btn-xs btn-danger">删除</a>
+                                    </td>
+
+                                    
+                          
+                                </tr>
+                                {/volist}
+
+                            </tbody>
+                        </table>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- /.row -->
+</section>
+
+{/block}

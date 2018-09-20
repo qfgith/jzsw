@@ -1,0 +1,62 @@
+{extend name="base" /}
+{block name="body"}
+{$info.ueditor}
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info info_box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">百度控件 & layui</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <!--表单数据-->
+                    <form method="post" id="adminHandle" action="">
+                    <div class="tab-content col-md-12">                       
+                        <div class="tab-pane active" id="tab_tongyong">                           
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>单图</td>
+                                    <td>
+                                        <input type="text" id="eimg" name="eimg" value="" size="40" class="layui-input layui-input-inline input-text">
+                                        <input type="file" name="file" class="layui-upload-file layui_upimage" accept=".gif, .jpg, .jpeg, .png , .bmp">
+                                        <img src="" class="th1_img imgh">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>单文件</td>
+                                    <td>
+                                        <input type="text" id="eimg" name="eimg" value="" size="40" class="layui-input layui-input-inline input-text">
+                                        <input type="file" name="file" class="layui-upload-file layui_upfile" accept=".txt, .pdf , .doc , .docx , .xls, .rar, .zip">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>通用上传单图</td>
+                                    <td>
+                                        <input type="text" id="eimg" name="eimg" value="" size="40" class="layui-input layui-input-inline input-text">
+                                        <input type="file" name="file" class="layui-upload-file" accept=".gif, .jpg, .jpeg, .png">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>图册</td>
+                                    <td>{$info.uimgs}</td>
+                                </tr>
+                                <tr>
+                                    <td>编辑器</td>
+                                    <td>{$info.ucontent}</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-2"></td>
+                                    <td><input type="submit" class="btn btn-primary" value="submit"></td>
+                                </tr>
+                            </table>
+                        </div>                           
+                    </div>              
+                    </form><!--表单数据-->
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+{/block}

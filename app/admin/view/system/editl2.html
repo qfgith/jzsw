@@ -1,0 +1,50 @@
+{extend name="base" /}
+{block name="body"}
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info info_box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">{$info.name}语言信息</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <!--表单数据-->
+                    <form method="post" id="adminHandle" action="">
+                    <input type="hidden" name="fname" value="{$info.val2}">
+                    <div class="tab-content col-md-12">                       
+                        <div class="tab-pane active" id="pengyouquan">                           
+                            <table class="table table-bordered">
+                                {volist name="list" id="vo"}
+                                    <tr>
+                                        <td class="col-sm-2">{$vo.name}：</td>
+                                        <td class="col-sm-10">
+                                            <input type="text" class="form-control" name="{$vo.name}" value="{$vo.value}" >
+                                        </td>
+                                    </tr>
+                                {/volist}
+                                
+                                
+                                <tr>
+                                    <td></td>
+                                    <td class="text-right">
+                                        <!-- <input type="submit" class="btn btn-primary" value="submit"> -->
+                                        <button class="btn btn-primary" lay-submit lay-filter="*" >保存</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>                           
+                    </div>              
+                    </form><!--表单数据-->
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+<script>
+$(function(){
+    // location.reload();
+})
+</script>
+{/block}

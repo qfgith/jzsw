@@ -1,0 +1,1522 @@
+[ 2018-08-29T18:55:27+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] www.gongxin.com/ [运行时间：0.131596s][吞吐率：7.60req/s] [内存消耗：3,396.78kb] [文件加载：53]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.gongxin.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\home\controller\Index->index[ E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\app\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com/app/home\view\index.html [ array (
+  0 => 'webset',
+  1 => 'search_link',
+  2 => 'keyword',
+  3 => 'uinfo',
+  4 => 'curl',
+  5 => 'ccurl',
+  6 => 'pagenavs',
+  7 => 'categorynavs',
+  8 => 'about',
+  9 => 'service',
+  10 => 'news',
+  11 => 'contacts',
+  12 => 'cdomain',
+  13 => 'ishome',
+  14 => 'slide_index',
+  15 => 'aboutintro',
+  16 => 'pos_team',
+  17 => 'anli_nav',
+  18 => 'pos_news',
+  19 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:28+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/team/index.html
+[ log ] www.gongxin.com/admin/team/index.html [运行时间：0.180177s][吞吐率：5.55req/s] [内存消耗：3,835.59kb] [文件加载：63]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'team',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.gongxin.com/admin/team_category/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/admin/team/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Team->index[ E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\app\admin\controller\Team.php ]
+[ info ] [ VIEW ] admin_themes/team\index.html [ array (
+  0 => 'menu',
+  1 => 'cdomain',
+  2 => 'agroup',
+  3 => 'webset',
+  4 => 'navigate_admin',
+  5 => 'admin_info',
+  6 => 'category_level_list',
+  7 => 'article_list',
+  8 => 'category_list',
+  9 => 'cid',
+  10 => 'keyword',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:28+08:00 ] 127.0.0.1 127.0.0.1 GET /public/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css
+[ log ] www.gongxin.com/public/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css [运行时间：0.033544s][吞吐率：29.81req/s] [内存消耗：1,362.72kb] [文件加载：37]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'pingtai',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.gongxin.com/admin/team/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker_min_css' => '',
+  'plugins' => 'datetimepicker',
+  'css' => 'bootstrap-datetimepicker.min.css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:28+08:00 ] 127.0.0.1 127.0.0.1 GET /public/static/pingtai/bootstrap/css/bootstrap.css.map
+[ log ] www.gongxin.com/public/static/pingtai/bootstrap/css/bootstrap.css.map [运行时间：0.020759s][吞吐率：48.17req/s] [内存消耗：1,361.90kb] [文件加载：37]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'pingtai',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/static/pingtai/bootstrap/css/bootstrap_css_map' => '',
+  'bootstrap' => 'css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:32+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/team/index.html
+[ log ] www.gongxin.com/admin/team/index.html [运行时间：0.129519s][吞吐率：7.72req/s] [内存消耗：3,648.94kb] [文件加载：61]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'team',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.gongxin.com/admin/team_category/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4',
+)
+[ info ] [ PARAM ] array (
+  '/admin/team/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Team->index[ E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\app\admin\controller\Team.php ]
+[ info ] [ VIEW ] admin_themes/team\index.html [ array (
+  0 => 'menu',
+  1 => 'cdomain',
+  2 => 'agroup',
+  3 => 'webset',
+  4 => 'navigate_admin',
+  5 => 'admin_info',
+  6 => 'category_level_list',
+  7 => 'article_list',
+  8 => 'category_list',
+  9 => 'cid',
+  10 => 'keyword',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:32+08:00 ] 127.0.0.1 127.0.0.1 GET /public/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css
+[ log ] www.gongxin.com/public/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css [运行时间：0.021716s][吞吐率：46.05req/s] [内存消耗：1,362.72kb] [文件加载：37]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'pingtai',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.gongxin.com/admin/team/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker_min_css' => '',
+  'plugins' => 'datetimepicker',
+  'css' => 'bootstrap-datetimepicker.min.css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:32+08:00 ] 127.0.0.1 127.0.0.1 GET /public/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css
+[ log ] www.gongxin.com/public/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css [运行时间：0.027943s][吞吐率：35.79req/s] [内存消耗：1,362.72kb] [文件加载：37]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'pingtai',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.gongxin.com/admin/team/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker_min_css' => '',
+  'plugins' => 'datetimepicker',
+  'css' => 'bootstrap-datetimepicker.min.css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:32+08:00 ] 127.0.0.1 127.0.0.1 GET /public/static/pingtai/bootstrap/css/bootstrap.css.map
+[ log ] www.gongxin.com/public/static/pingtai/bootstrap/css/bootstrap.css.map [运行时间：0.026625s][吞吐率：37.56req/s] [内存消耗：1,361.90kb] [文件加载：37]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'pingtai',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/static/pingtai/bootstrap/css/bootstrap_css_map' => '',
+  'bootstrap' => 'css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:33+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] www.gongxin.com/ [运行时间：0.127361s][吞吐率：7.85req/s] [内存消耗：3,203.05kb] [文件加载：51]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.gongxin.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\home\controller\Index->index[ E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\app\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com/app/home\view\index.html [ array (
+  0 => 'webset',
+  1 => 'search_link',
+  2 => 'keyword',
+  3 => 'uinfo',
+  4 => 'curl',
+  5 => 'ccurl',
+  6 => 'pagenavs',
+  7 => 'categorynavs',
+  8 => 'about',
+  9 => 'service',
+  10 => 'news',
+  11 => 'contacts',
+  12 => 'cdomain',
+  13 => 'ishome',
+  14 => 'slide_index',
+  15 => 'aboutintro',
+  16 => 'pos_team',
+  17 => 'anli_nav',
+  18 => 'pos_news',
+  19 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:34+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] www.gongxin.com/ [运行时间：0.135001s][吞吐率：7.41req/s] [内存消耗：3,203.05kb] [文件加载：51]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.gongxin.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\home\controller\Index->index[ E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\app\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com/app/home\view\index.html [ array (
+  0 => 'webset',
+  1 => 'search_link',
+  2 => 'keyword',
+  3 => 'uinfo',
+  4 => 'curl',
+  5 => 'ccurl',
+  6 => 'pagenavs',
+  7 => 'categorynavs',
+  8 => 'about',
+  9 => 'service',
+  10 => 'news',
+  11 => 'contacts',
+  12 => 'cdomain',
+  13 => 'ishome',
+  14 => 'slide_index',
+  15 => 'aboutintro',
+  16 => 'pos_team',
+  17 => 'anli_nav',
+  18 => 'pos_news',
+  19 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:34+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] www.gongxin.com/ [运行时间：0.161396s][吞吐率：6.20req/s] [内存消耗：3,203.05kb] [文件加载：51]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.gongxin.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\home\controller\Index->index[ E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\app\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com/app/home\view\index.html [ array (
+  0 => 'webset',
+  1 => 'search_link',
+  2 => 'keyword',
+  3 => 'uinfo',
+  4 => 'curl',
+  5 => 'ccurl',
+  6 => 'pagenavs',
+  7 => 'categorynavs',
+  8 => 'about',
+  9 => 'service',
+  10 => 'news',
+  11 => 'contacts',
+  12 => 'cdomain',
+  13 => 'ishome',
+  14 => 'slide_index',
+  15 => 'aboutintro',
+  16 => 'pos_team',
+  17 => 'anli_nav',
+  18 => 'pos_news',
+  19 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:35+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] www.gongxin.com/ [运行时间：0.181581s][吞吐率：5.51req/s] [内存消耗：3,203.05kb] [文件加载：51]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.gongxin.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\home\controller\Index->index[ E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\app\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com/app/home\view\index.html [ array (
+  0 => 'webset',
+  1 => 'search_link',
+  2 => 'keyword',
+  3 => 'uinfo',
+  4 => 'curl',
+  5 => 'ccurl',
+  6 => 'pagenavs',
+  7 => 'categorynavs',
+  8 => 'about',
+  9 => 'service',
+  10 => 'news',
+  11 => 'contacts',
+  12 => 'cdomain',
+  13 => 'ishome',
+  14 => 'slide_index',
+  15 => 'aboutintro',
+  16 => 'pos_team',
+  17 => 'anli_nav',
+  18 => 'pos_news',
+  19 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:35+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] www.gongxin.com/ [运行时间：0.136503s][吞吐率：7.33req/s] [内存消耗：3,203.05kb] [文件加载：51]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.gongxin.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\home\controller\Index->index[ E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\app\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com/app/home\view\index.html [ array (
+  0 => 'webset',
+  1 => 'search_link',
+  2 => 'keyword',
+  3 => 'uinfo',
+  4 => 'curl',
+  5 => 'ccurl',
+  6 => 'pagenavs',
+  7 => 'categorynavs',
+  8 => 'about',
+  9 => 'service',
+  10 => 'news',
+  11 => 'contacts',
+  12 => 'cdomain',
+  13 => 'ishome',
+  14 => 'slide_index',
+  15 => 'aboutintro',
+  16 => 'pos_team',
+  17 => 'anli_nav',
+  18 => 'pos_news',
+  19 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:36+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/team/index.html
+[ log ] www.gongxin.com/admin/team/index.html [运行时间：0.132569s][吞吐率：7.54req/s] [内存消耗：3,648.60kb] [文件加载：61]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'team',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.gongxin.com/admin/team_category/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/admin/team/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Team->index[ E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\app\admin\controller\Team.php ]
+[ info ] [ VIEW ] admin_themes/team\index.html [ array (
+  0 => 'menu',
+  1 => 'cdomain',
+  2 => 'agroup',
+  3 => 'webset',
+  4 => 'navigate_admin',
+  5 => 'admin_info',
+  6 => 'category_level_list',
+  7 => 'article_list',
+  8 => 'category_list',
+  9 => 'cid',
+  10 => 'keyword',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:36+08:00 ] 127.0.0.1 127.0.0.1 GET /public/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css
+[ log ] www.gongxin.com/public/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css [运行时间：0.038858s][吞吐率：25.73req/s] [内存消耗：1,362.72kb] [文件加载：37]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'pingtai',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.gongxin.com/admin/team/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker_min_css' => '',
+  'plugins' => 'datetimepicker',
+  'css' => 'bootstrap-datetimepicker.min.css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:36+08:00 ] 127.0.0.1 127.0.0.1 GET /public/static/pingtai/bootstrap/css/bootstrap.css.map
+[ log ] www.gongxin.com/public/static/pingtai/bootstrap/css/bootstrap.css.map [运行时间：0.022993s][吞吐率：43.49req/s] [内存消耗：1,361.90kb] [文件加载：37]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'pingtai',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/static/pingtai/bootstrap/css/bootstrap_css_map' => '',
+  'bootstrap' => 'css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:36+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/team/index.html
+[ log ] www.gongxin.com/admin/team/index.html [运行时间：0.149666s][吞吐率：6.68req/s] [内存消耗：3,648.60kb] [文件加载：61]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'team',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.gongxin.com/admin/team_category/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/admin/team/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Team->index[ E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\app\admin\controller\Team.php ]
+[ info ] [ VIEW ] admin_themes/team\index.html [ array (
+  0 => 'menu',
+  1 => 'cdomain',
+  2 => 'agroup',
+  3 => 'webset',
+  4 => 'navigate_admin',
+  5 => 'admin_info',
+  6 => 'category_level_list',
+  7 => 'article_list',
+  8 => 'category_list',
+  9 => 'cid',
+  10 => 'keyword',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:36+08:00 ] 127.0.0.1 127.0.0.1 GET /public/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css
+[ log ] www.gongxin.com/public/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css [运行时间：0.028040s][吞吐率：35.66req/s] [内存消耗：1,362.72kb] [文件加载：37]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'pingtai',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.gongxin.com/admin/team/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker_min_css' => '',
+  'plugins' => 'datetimepicker',
+  'css' => 'bootstrap-datetimepicker.min.css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:36+08:00 ] 127.0.0.1 127.0.0.1 GET /public/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css
+[ log ] www.gongxin.com/public/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css [运行时间：0.026310s][吞吐率：38.01req/s] [内存消耗：1,362.72kb] [文件加载：37]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'pingtai',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.gongxin.com/admin/team/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker_min_css' => '',
+  'plugins' => 'datetimepicker',
+  'css' => 'bootstrap-datetimepicker.min.css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:37+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/team/index.html
+[ log ] www.gongxin.com/admin/team/index.html [运行时间：0.195784s][吞吐率：5.11req/s] [内存消耗：3,648.60kb] [文件加载：61]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'team',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.gongxin.com/admin/team_category/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/admin/team/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Team->index[ E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\app\admin\controller\Team.php ]
+[ info ] [ VIEW ] admin_themes/team\index.html [ array (
+  0 => 'menu',
+  1 => 'cdomain',
+  2 => 'agroup',
+  3 => 'webset',
+  4 => 'navigate_admin',
+  5 => 'admin_info',
+  6 => 'category_level_list',
+  7 => 'article_list',
+  8 => 'category_list',
+  9 => 'cid',
+  10 => 'keyword',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:37+08:00 ] 127.0.0.1 127.0.0.1 GET /public/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css
+[ log ] www.gongxin.com/public/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css [运行时间：0.028840s][吞吐率：34.67req/s] [内存消耗：1,362.72kb] [文件加载：37]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'pingtai',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.gongxin.com/admin/team/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker_min_css' => '',
+  'plugins' => 'datetimepicker',
+  'css' => 'bootstrap-datetimepicker.min.css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:37+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/team/index.html
+[ log ] www.gongxin.com/admin/team/index.html [运行时间：0.160938s][吞吐率：6.21req/s] [内存消耗：3,648.60kb] [文件加载：61]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'team',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.gongxin.com/admin/team_category/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/admin/team/index_html' => '',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\Team->index[ E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\app\admin\controller\Team.php ]
+[ info ] [ VIEW ] admin_themes/team\index.html [ array (
+  0 => 'menu',
+  1 => 'cdomain',
+  2 => 'agroup',
+  3 => 'webset',
+  4 => 'navigate_admin',
+  5 => 'admin_info',
+  6 => 'category_level_list',
+  7 => 'article_list',
+  8 => 'category_list',
+  9 => 'cid',
+  10 => 'keyword',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:37+08:00 ] 127.0.0.1 127.0.0.1 GET /public/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css
+[ log ] www.gongxin.com/public/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css [运行时间：0.027497s][吞吐率：36.37req/s] [内存消耗：1,362.72kb] [文件加载：37]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'pingtai',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://www.gongxin.com/admin/team/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/static/pingtai/plugins/datetimepicker/css/bootstrap-datetimepicker_min_css' => '',
+  'plugins' => 'datetimepicker',
+  'css' => 'bootstrap-datetimepicker.min.css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:37+08:00 ] 127.0.0.1 127.0.0.1 GET /public/static/pingtai/bootstrap/css/bootstrap.css.map
+[ log ] www.gongxin.com/public/static/pingtai/bootstrap/css/bootstrap.css.map [运行时间：0.029799s][吞吐率：33.56req/s] [内存消耗：1,361.90kb] [文件加载：37]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'pingtai',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+  '/static/pingtai/bootstrap/css/bootstrap_css_map' => '',
+  'bootstrap' => 'css',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:38+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] www.gongxin.com/ [运行时间：0.153727s][吞吐率：6.51req/s] [内存消耗：3,203.05kb] [文件加载：51]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.gongxin.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\home\controller\Index->index[ E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\app\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com/app/home\view\index.html [ array (
+  0 => 'webset',
+  1 => 'search_link',
+  2 => 'keyword',
+  3 => 'uinfo',
+  4 => 'curl',
+  5 => 'ccurl',
+  6 => 'pagenavs',
+  7 => 'categorynavs',
+  8 => 'about',
+  9 => 'service',
+  10 => 'news',
+  11 => 'contacts',
+  12 => 'cdomain',
+  13 => 'ishome',
+  14 => 'slide_index',
+  15 => 'aboutintro',
+  16 => 'pos_team',
+  17 => 'anli_nav',
+  18 => 'pos_news',
+  19 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-08-29T18:55:38+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] www.gongxin.com/ [运行时间：0.199757s][吞吐率：5.01req/s] [内存消耗：3,203.05kb] [文件加载：51]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.gongxin.com/',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=99sg6c98infqggekfu7ta1jqq4; think_var=zh-cn',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\home\controller\Index->index[ E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\app\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com/app/home\view\index.html [ array (
+  0 => 'webset',
+  1 => 'search_link',
+  2 => 'keyword',
+  3 => 'uinfo',
+  4 => 'curl',
+  5 => 'ccurl',
+  6 => 'pagenavs',
+  7 => 'categorynavs',
+  8 => 'about',
+  9 => 'service',
+  10 => 'news',
+  11 => 'contacts',
+  12 => 'cdomain',
+  13 => 'ishome',
+  14 => 'slide_index',
+  15 => 'aboutintro',
+  16 => 'pos_team',
+  17 => 'anli_nav',
+  18 => 'pos_news',
+  19 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

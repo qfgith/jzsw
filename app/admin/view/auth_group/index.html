@@ -1,0 +1,46 @@
+{extend name="base" /}
+{block name="body"}
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">权限组</h3>
+                    <div class="form-group pull-right">
+                        <a href="{:url('admin/auth_group/add')}" class="btn btn-default">添加权限组</a>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <table class="table no-margin">
+                            <thead>
+                                <tr role="row">
+                                    <th>ID</th>
+                                    <th>名称</th>
+                                    <th>状态</th>
+                                    <th>操作</th>
+                               </tr>
+                            </thead>
+                            <tbody>
+                                {foreach name="auth_group_list" item="vo"}
+                                <tr>
+                                    <td>{$vo.id}</td>
+                                    <td>{$vo.title}</td>
+                                    <td>{php}echo $vo['status']==1 ? '<label class="btn btn-sm btn-success">启用</label>' : '<label class="btn btn-sm btn-danger">禁用</label>';{/php}</td>
+                                    <td>
+                                        <a href="{:url('admin/auth_group/edit',['id'=>$vo['id']])}" class="btn btn-sm btn-primary">编辑</a>
+                                        <a href="{:url('admin/auth_group/delete',['id'=>$vo['id']])}" onclick="return confirm('确定删除吗?')" class="btn btn-sm btn-danger">删除</a>
+                                    </td>
+                                </tr>
+                                {/foreach}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+{/block}

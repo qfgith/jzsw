@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{$webset['site_name']}</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.6 -->
+        <link rel="stylesheet" href="__PTSTA__/bootstrap/css/bootstrap.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="__PTSTA__/bootstrap/css/font-awesome.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="__PTSTA__/bootstrap/css/ionicons.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="__PTSTA__/dist/css/AdminLTE.min.css">
+        <link rel="stylesheet" href="__PTSTA__/dist/css/skins/_all-skins.min.css">
+        <link rel="stylesheet" href="__PTSTA__/dist/css/style.css">
+        <!-- jQuery 2.2.3 -->
+        <script src="__PTSTA__/dist/js/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="__PTSTA__/bootstrap/js/bootstrap.js"></script>
+        <script src="__PTSTA__/plugins/datepicker/bootstrap-datepicker.js"></script>
+        <!-- boostrap datetimepicker -->
+        <link rel="stylesheet" href="__PTSTA__/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css">
+        <script src="__PTSTA__/plugins/datetimepicker/js/bootstrap-datetimepicker.js"></script>
+        <!-- iCheck 1.0.1 -->
+        <link rel="stylesheet" href="__PTSTA__/plugins/iCheck/all.css">
+        <script src="__PTSTA__/plugins/iCheck/icheck.min.js"></script>
+        <!-- select2 -->
+        <link rel="stylesheet" href="__PTSTA__/plugins/select2/select2.css">
+        <script src="__PTSTA__/plugins/select2/select2.min.js"></script>
+        <!-- bootstrap datepicker -->
+        <link rel="stylesheet" href="__PTSTA__/plugins/datepicker/datepicker3.css">
+        <script src="__PTSTA__/plugins/datepicker/bootstrap-datepicker.js"></script>
+        <!--[if lt IE 9]>
+        <script src="__PTSTA__/bootstrap/js/html5shiv.min.js"></script>
+        <script src="__PTSTA__/bootstrap/js/respond.min.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body class="hold-transition skin-blue sidebar-mini ">
+        <div class="wrapper">
+            <!-- top -->
+            <header class="main-header">
+                <div class="fix_div">
+                    <!-- Logo -->
+                    <a href="{:url('admin/Index/index')}" class="logo">
+                        <span class="logo-mini"><b>{$webset['site_name']}</b></span>
+                        <span class="logo-lg"><b>{$webset['site_name']}</b></span>
+                    </a>
+                    <nav class="navbar navbar-static-top">
+                        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle navigation</span>
+                        </a>
+                        <div class="navbar-custom-menu">
+                            <ul class="nav navbar-nav">
+                                <!-- User -->
+                                <li class="dropdown user user-menu">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <img src="{$admin_info.headpic}" class="user-image" >
+                                        <span class="hidden-xs">{$admin_info.name}</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <!-- User image -->
+                                        <li class="user-header">
+                                            <img src="{$admin_info.headpic}" class="img-circle" alt="User Image">
+                                            <p>{$admin_info.name} - {$admin_info.role_name}<small>注册于 Nov. {$admin_info.addtime|date="Y",###}</small></p>
+                                        </li>
+                                        <!-- Menu Footer-->
+                                        <li class="user-footer">
+                                            <div class="pull-left">
+                                                <a href="{:url('admin/edit',['id'=>$admin_info.id])}" class="btn btn-default btn-flat">资料</a>
+                                            </div>
+                                            <div class="pull-right">
+                                                <a href="{:url('login/logout')}" class="btn btn-default btn-flat">登出</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- Control Sidebar Toggle Button -->
+                            </ul>
+                        </div>
+
+                    </nav>
+                </div>
+            </header>
+            <!-- left -->
+            <aside class="main-sidebar">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- Sidebar user panel -->
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            {empty name="admin_info.headpic"}
+                                <img class="img-circle" src="__PTSTA__/dist/img/user2-160x160.jpg" >
+                            {else/}
+                                <img class="img-circle" src="{$admin_info.headpic}" >
+                            {/empty}
+                        </div>
+                        <div class="pull-left info">
+                            <p>{$admin_info.name}</p>
+                            <a href="#"><i class="fa fa-circle text-success"></i> {$admin_info.role_name}</a>
+                        </div>
+                    </div>
+                    <!-- sidebar menu: : treeview --- navigate_admin.active = $vo[group] : active -->
+                    <ul class="sidebar-menu">
+                        <li class="header">导航</li>
+                        {foreach name="menu" item="vo"}
+                        <li {if condition="$navigate_admin['active'] == $vo['group']"}class="treeview active"{else/}class="treeview"{/if} >
+                            <a href="{:url($vo.name)}" >
+                                <i class="{$vo.icon}"></i>
+                                <span>{$vo.title}</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            {if condition="isset($vo['children'])"}
+                            <ul class="treeview-menu">
+                                {foreach name="vo['children']" item="v"}
+                                    <li>
+                                        <a href="{:url($v.name)}">
+                                            <i class="{$v.icon}"></i>{$v.title}
+                                        </a>
+                                    </li>
+                                {/foreach}
+                            </ul>
+                            {/if}
+                        </li>
+                        {/foreach}
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+
+            <div class="content-wrapper">
+                <!-- breadcrumb -->
+                <div class="breadcrumbs" id="breadcrumbs">
+                    <ol class="breadcrumb">
+                    {foreach name="navigate_admin.list" key="k" item="v"}
+                        {if condition="$k eq '后台首页'"}  
+                            <li><a href="{$v}"><i class="fa fa-dashboard"></i>&nbsp;&nbsp;{$k}</a></li>
+                        {else/}    
+                            <li><a href="{$v}">{$k}</a></li>
+                        {/if}                  
+                    {/foreach}          
+                    </ol>
+                </div>
+                <!--主体-->
+                {block name="body"}{/block}
+
+            </div>
+            <!-- bottom -->
+            <footer class="main-footer">
+                <div class="pull-right hidden-xs"></div>
+                <strong>Copyright &copy; 2014-{php}echo date("Y");{/php} .</strong> All rights
+                reserved.
+            </footer>
+            <div class="control-sidebar-bg"></div>
+        </div>
+        <!-- AdminLTE App -->
+        <script>
+            // 定义全局JS变量
+            var GV = {
+                current_controller: "admin/{$controller|default=''}/",
+                base_url: "__PTSTA__"
+            };
+        </script>
+        <link rel="stylesheet" href="__PTSTA__/plugins/layui/css/layui.css" media="all">
+        <script src="__PTSTA__/plugins/layui/lay/dest/layui.all.js"></script>
+        <script src="__PTSTA__/dist/js/func.js"></script>
+        <script src="__PTSTA__/dist/js/app.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,108 @@
+
+{extend name="base" /}
+{block name="body"} 
+<!-- Main content -->
+<section class="content">
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+        <div class="info_box">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">详细信息</h3>
+                    </div>                       
+                    <form id="form1" method="post" action="{:url('admin/PageContactCategory/save')}">
+                        
+                        <div class="panel mt20">
+                            <div class="panel-body">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td id="box">上级栏目</td>
+                                        <td >
+                                             <select name="pid" lay-verify="required" class='col-sm-4 form-control select2'>
+                                                <option value="0">--无--</option>
+                                                {foreach name="category_level_list" item="vo"}
+                                                <option value="{$vo.id}" {if condition="$pid==$vo.id"} selected="selected"{/if}>{neq name="vo.level" value="1"}|{php}for($i=1;$i<$vo['level'];$i++){echo ' ----';}{/php}{/neq} {$vo.name}</option>
+                                                {/foreach}
+                                            </select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td id="box">栏目名称</td>
+                                        <td >
+                                            <input type="text" name="name" value="" required  lay-verify="required" placeholder="栏目名称" class="form-control">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td id="box">别名</td>
+                                        <td >
+                                            <input type="text" name="alias" value=""  placeholder="别名" class="form-control">
+                                        </td>
+                                    </tr>
+                                    
+
+                                    <tr>
+                                        <td id="box"> banner图 </td>
+                                        <td >
+                                            <input type="text" name="thumb" id="img" size="50" value="" class="layui-input input-text">
+                                            <button type="button" class="btn btn-primary layui_upimage">上传图片</button>
+                                            <img src="" class="th1_img imgb">
+                                        </td>
+                                    </tr>
+                                    
+
+                                    <tr>
+                                        <td id="box">描述</td>
+                                        <td >
+                                            <textarea name='introduction' class="form-control" placeholder="描述" rows='5'></textarea>
+                                        </td>
+                                    </tr>
+
+                                   
+
+                                    <tr>
+                                        <td class="col-sm-2"></td>
+                                        <td class="col-sm-8 text-right">
+                                            <input class="btn btn-primary" type="submit" lay-submit lay-filter="*" value="保存">
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+</section>
+
+{/block} 
+
+
+
+
+
+
+
+
+
+
+
+{block name="js"}
+<script src="__JS__/kindeditor/kindeditor.config.js"></script>
+<script src="__JS__/kindeditor/kindeditor-all-min.js"></script>
+{/block}
+{block name="script"}
+<script>
+    KindEditor.ready(function(K) {
+        K.create('#content', KindEditorOptions);
+    });
+</script>
+{/block}

@@ -1,0 +1,72 @@
+{extend name="base" /}
+{block name="body"}    
+<!-- Main content -->
+<section class="content">
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">{$title}列表</h3>
+                </div>
+                <!-- search -->
+                <div class="panel-body mb0">
+                    <div class="navbar navbar-default mb0">
+                    </div>
+                </div>
+                <!-- table -->
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <form id="myform" name="myform"  method="post">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>编号/ID</th>
+                                    <th>类型</th>
+                                    <th>电话</th>
+                                    <th>状态</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                
+                                
+                                {volist name='feedback_list' id='vo'}
+                                <tr>
+                                    
+                                    <td>{$vo['id']}</td>
+                                    <td><a href='{:url("Admin/Feedback/edit",["id"=>$vo["id"]])}'>{$vo['type']}</a></td>
+                                    <td>{$vo['mobile']}</td>
+                                    <td>
+                                    {eq name="vo['status']" value="1"}
+                                        <span class="label label-success">已读</span>
+                                        {else/}
+                                        <span class="label label-danger">未读</span>
+                                    {/eq}
+                                    </td>
+                                    <td>
+                                        <a href='{:url("Admin/Feedback/edit",["id"=>$vo["id"]])}' class="btn btn-xs btn-primary">编辑</a>
+                                        <a href='{:url("Admin/Feedback/delete",["id"=>$vo["id"]])}' onclick="return confirm('确定删除吗?')" lay-filter="*" class="btn btn-xs btn-danger">删除</a>
+                                    </td>
+
+                                    
+                          
+                                </tr>
+                                {/volist}
+
+                            </tbody>
+                        </table>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- /.row -->
+</section>
+
+{/block}

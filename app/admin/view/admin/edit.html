@@ -1,0 +1,107 @@
+{extend name="base" /}
+{block name="body"}
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info info_box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">管理员信息</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <!--表单数据-->
+                    <form method="post" id="adminHandle" action="{:url('admin/admin/update')}">
+                    <input type="hidden" name="id" value="{$admin_user.id}">
+                    <div class="tab-content col-md-10">                       
+                        <div class="tab-pane active" id="tab_tongyong">                           
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td class="col-sm-2">权限：</td>
+                                    <td class="col-sm-8">
+                                        <select class="form-control" name="group_id">
+                                            {volist name="role" id="vo"}
+                                                <option value="{$vo.id}" {if condition="$admin_user.group_id==$vo.id"} selected="selected"{/if} >{$vo.title}</option>
+                                            {/volist}
+                                        </select>
+                                    </td>
+                                </tr>  
+                                <tr>
+                                    <td>登录名：</td>
+                                    <td>
+                                        <input type="text" class="form-control" name="name" value="{$admin_user.name}" id="aname" placeholder="登录名">                          
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>真实姓名：</td>
+                                    <td>
+                                        <input type="text" class="form-control" name="realname" value="{$admin_user.realname}" placeholder="真实姓名">                         
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>手机号码：</td>
+                                    <td>
+                                        <input type="text" class="form-control" id="mobile" value="{$admin_user.mobile}" name="mobile" placeholder="电话" onkeyup="value=value.replace(/[^0-9]/g,'')" onpaste="value=value.replace(/[^0-9]/g,'')" oncontextmenu = "value=value.replace(/[^0-9]/g,'')" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>密码：</td>
+                                    <td>
+                                        <input type="password" class="form-control" name="pwd" placeholder="密码">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>确认密码：</td>
+                                    <td>
+                                        <input type="password" class="form-control" id="confirm_pwd" name="confirm_pwd" placeholder="确认密码">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> 头像 </td>
+                                    <td >
+                                        <input type="text" name="headpic" id="headpic" value="{$admin_user.headpic}" size="50" class="layui-input input-text">
+                                        <button type="button" class="btn btn-primary layui_upimage">上传图片</button>
+                                        {empty name="admin_user.headpic"}<img src="" class="th1_img imgh">{else/}<img src="{$cdomain}{$admin_user.headpic}" class="th1_img imgb">{/empty}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>状态：</td>
+                                    <td>
+                                        <input type="radio" class="iccontrol rr" name="status" value="1" {if condition="$admin_user['status'] == 1"}checked{/if} ><span class="ml10 mr30">启用</span>
+                                        <input type="radio" class="iccontrol rr" name="status" value="0" {if condition="$admin_user['status'] == 0"}checked{/if} ><span class="ml10 mr30">禁用</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="text-right">
+                                        <!-- <input type="submit" value="submit"> -->
+                                        <button class="btn btn-primary" lay-submit lay-filter="*" >保存</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>                           
+                    </div>              
+                    </form><!--表单数据-->
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+<script>
+function adsubmit(){
+    if($('input[name=name]').val() == ''){
+        alert("登录名不能为空！");
+        return false;
+    }
+    if($('input[name=realname]').val() == ''){
+        alert("真实姓名不能为空！");
+        return false;
+    }
+    if($('input[name=mobile]').val() == ''){
+        alert("手机号码不能为空！");
+        return false;
+    }
+    $('#adminhandle').submit();
+}
+</script>
+{/block}

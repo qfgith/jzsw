@@ -1,0 +1,70 @@
+{extend name="base" /}
+{block name="body"}    
+<!-- Main content -->
+<section class="content">
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">友情链接分类列表</h3>
+                </div>
+                <!-- search -->
+                <div class="panel-body mb0">
+                    <div class="navbar navbar-default mb0">
+                        <form class="navbar-form form-inline" method="post" action="">
+
+                            <!-- <a href='{:url("Admin/linkCategory/add")}' class="btn btn-info pull-right">添加友情链接分类</a> -->
+                        </form>
+                    </div>
+                </div>
+                <!-- table -->
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <form id="myform" name="myform"  method="post">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>编号/ID</th>
+                                    <th>分类名</th>
+                                    <th>管理</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                
+                                
+                                {volist name='link_category_list' id='vo'}
+                                <tr>
+                                    
+                                    <td>{$vo['id']}</td>
+                                    <td><a href='{:url("Admin/linkCategory/edit",["id"=>$vo["id"]])}'>{$vo['name']}</a></td>
+                                    <td>
+                                        <a href='{:url("Admin/link/index",["cate_id"=>$vo["id"]])}' class="btn btn-xs btn-primary">链接管理</a>
+                                    </td>
+                                    <td>
+                                        <a href='{:url("Admin/linkCategory/edit",["id"=>$vo["id"]])}' class="btn btn-xs btn-primary">编辑</a>
+                                        <a href='{:url("Admin/linkCategory/delete",["id"=>$vo["id"]])}' onclick="return confirm('确定删除吗?')" lay-filter="*" class="btn btn-xs btn-danger">删除</a>
+                                    </td>
+
+                                    
+                          
+                                </tr>
+                                {/volist}
+
+                            </tbody>
+                        </table>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- /.row -->
+</section>
+
+{/block}

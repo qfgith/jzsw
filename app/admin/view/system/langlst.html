@@ -1,0 +1,58 @@
+{extend name="base" /}
+{block name="body"}
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">语言包</h3>
+                </div>
+                <!-- search -->
+                <div class="panel-body mb0">
+                    <div class="navbar navbar-default mb0">
+                        <div class="navbar-form form-inline">
+                            <a href="{:url('admin/system/addlk')}" class="btn btn-info">添加key</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <table class="table no-margin">
+                            <thead>
+                                <tr role="row">
+                                    <th>语言标识</th>
+                                    {volist name="llist" id="vv"}
+                                    <th>{$vv.name}</th>
+                                    {/volist}
+                                    <th>操作</th>
+                               </tr>
+                            </thead>
+                            <tbody>
+                                {foreach name="list" item="vo" key="k"}
+                                <tr role="row">
+                                    <td>{$vo.meta_key}</td>
+                                    {volist name="llist" id="vv"}
+                                    <td>{$vo.meta_value|get_kval_by_json=###,$vv.val2}</td>
+                                    {/volist}
+                                    <td>
+                                        <a href="{:url('admin/system/editlk',['id'=>$vo['id']])}" class="btn btn-sm btn-primary">编辑</a>
+                                        <a class="btn btn-sm btn-danger ajax-action" data-action="{:url('admin/system/dellk',['id'=>$vo['id']])}">删除</a>
+                                    </td>
+                                </tr>
+                                {/foreach}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="box-footer clearfix">
+                    <ul class="pagination pagination-sm pull-right">
+                        {$pages}
+                    </ul>
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+{/block}

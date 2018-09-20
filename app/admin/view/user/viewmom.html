@@ -1,0 +1,55 @@
+{extend name="base" /}
+{block name="body"}
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info info_box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">朋友圈详情</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <!--表单数据-->
+                    <div class="tab-content col-md-10">                       
+                        <div class="tab-pane active" id="pengyouquan">    
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td class="col-sm-2">用户名：</td>
+                                    <td class="col-sm-8">
+                                        {$info.user_id|getFval="im_user","user_name",###}
+                                    </td>
+                                </tr>  
+                                <tr>
+                                    <td>发布时间：</td>
+                                    <td>
+                                        {$info.addtime|date="Y-m-d H:i",###}                         
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>朋友圈内容：</td>
+                                    <td>
+                                        <div class="col-md-10 clearfix" style="padding: 0;">
+                                            {volist name="info.allimgs" id="vo"}
+                                            <div {if condition="$info['allnum'] gt 4"}class="col-md-4 column"{else/}class="col-md-6 column"{/if}>
+                                                <img src="{$cdomain}__PTSTA__/dist/img/300.png" style="background-image: url({$cdomain}{$vo.name})" />
+                                            </div>
+                                            {/volist}
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <p>{$info.text}</p>
+                                        
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                        </div>                           
+                    </div>              
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+
+{/block}

@@ -1,0 +1,87 @@
+{extend name="base" /}
+{block name="body"}    
+<!-- Main content -->
+<section class="content">
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">单页列表</h3>
+                </div>
+                <!-- search -->
+                <div class="panel-body mb0">
+                    <div class="navbar navbar-default mb0">
+                        <form class="navbar-form form-inline" method="post" action="">
+                           
+
+                            <a href='{:url("Admin/Page/add")}' class="btn btn-info pull-right">添加单页</a>
+                        </form>
+                    </div>
+                </div>
+                <!-- table -->
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <form id="myform" name="myform" action='{:url("Admin/Page/listorder")}' method="post">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <!-- <th class="text-center">排序</th> -->
+                                    <th>编号/ID</th>
+                                    <th>标题</th>
+                                    <eq name="mname" value="Picture"><th>缩略图</th></eq>
+                                    <th>是否显示</th>
+                                    <th>发布时间</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                
+                                
+                                {volist name='article_list' id='vo'}
+                                <tr>
+                                   <!--  <td width="40">
+                                        <input name="sort[{$vo['id']}]" type="text" size="3" value="{$vo['sort']}" class="text-center">
+                                    </td> -->
+                                    <td>{$vo['id']}</td>
+                                    <td><a href='{:url("Admin/Page/edit",["id"=>$vo["id"]])}'>{$vo['title']}</td>
+                                    <td>{if condition="$vo['thumb'] neq null"}<img src="/{$vo['thumb']}" width="50px" />{/if}</td>
+                                    <td>
+                                      {eq name="vo['isdel']" value="0"}
+                                        <span class="label label-success">显示</span>
+                                        {else/}
+                                        <span class="label label-danger">隐藏</span>
+                                      {/eq}
+                                    </td>
+                                    <td>{$vo['create_time']}</td>
+                                    <td>
+                                        <a href='{:url("Admin/Page/edit",["id"=>$vo["id"]])}' class="btn btn-xs btn-primary">编辑</a>
+                                        <a href='{:url("Admin/Page/delete",["id"=>$vo["id"]])}' onclick="return confirm('确定删除吗?')" lay-filter="*" class="btn btn-xs btn-danger">删除</a>
+                                    </td>
+                          
+                                </tr>
+                                {/volist}
+
+                                <!-- <tr>
+                                    <td colspan="9">
+                                        <input class="btn btn-sm btn-primary" lay-submit lay-filter="*" type="submit" value="排序" />
+                                    </td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                        </form>
+                    </div>
+                <!--分页-->
+                    {$article_list->render()}
+                    <!-- /.table-responsive --> 
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- /.row -->
+</section>
+
+{/block}

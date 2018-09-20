@@ -1,0 +1,254 @@
+
+{extend name="base" /}
+{block name="body"} 
+<!-- Main content -->
+<section class="content">
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+        <div class="info_box">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">详细信息</h3>
+                    </div>
+                    
+                    <form id="form1" method="post" action="{:url('admin/Solution/save')}">
+                        <input type="hidden" name="id" value="" />
+                        <div class="panel mt20">
+                            <div class="panel-body">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td id="box">公司</td>
+                                        <td >
+                                             <select name="com_id" lay-verify="required" class='col-sm-4 form-control select2'>
+                                               
+                                                {foreach name="all_companymes" item="vo"}
+                                                <option value="{$vo.id}"> {$vo.title}</option>
+                                                {/foreach}
+                                            </select>
+                                        </td>
+                                    </tr>
+
+                                     <tr>
+                                        <td id="box">车型</td>
+                                        <td>
+                                            <select name="oneC_id" id='oneC_id' lay-verify="required" class='col-sm-4 form-control select2' style="width: 30%;margin-right: 25px;">
+                                               
+                                                {foreach name="one_carnav" item="vo"}
+                                                <option value="{$vo.id}"> {$vo.name}</option>
+                                                {/foreach}
+                                            </select>
+
+                                            <select name="twoC_id" id='twoC_id' lay-verify="required" class='col-sm-4 form-control select2' style="width: 30%;margin-right: 25px;">
+                                               
+                                                {foreach name="two_carnav" item="vo"}
+                                                <option value="{$vo.id}"> {$vo.name}</option>
+                                                {/foreach}
+                                            </select>
+
+                                            <select name="car_id" id='car_id' lay-verify="required" class='col-sm-4 form-control select2' style="width: 30%;">
+                                               
+                                                {foreach name="three_carnav" item="vo"}
+                                                <option value="{$vo.id}"> {$vo.title}</option>
+                                                {/foreach}
+                                            </select>
+                                        </td>
+
+                                    </tr>
+
+
+<!-- 
+                                    <tr>
+                                        <td id="box">标题</td>
+                                        <td >
+                                            <input type="text" name="title" value=""  placeholder="标题" class="form-control">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="box">小标题</td>
+                                        <td >
+                                            <input type="text" name="title1" value=""  placeholder="小标题" class="form-control">
+                                        </td>
+                                    </tr> -->
+
+
+                                   <!--  <tr>
+                                        <td id="box"> 描述 </td>
+                                        <td >
+                                            <textarea class="form-control" name="introduction" rows="3"></textarea>
+                                        </td>
+                                    </tr> -->
+
+                                   <!--  <tr>
+                                        <td id="box"> 略缩图 </td>
+                                        <td >
+                                            <input type="text" name="thumb" id="img" size="50" class="layui-input input-text">
+                                            <button type="button" class="btn btn-primary layui_upimage">上传图片</button>
+                                            <img src="" class="th1_img imgh">
+                                        </td>
+                                    </tr> -->
+                                <style>
+                                    .addbut{border:2px; border-color:#00CC00; margin-top:20px}
+                                    #tab,#tab tbody,#tab tr td{border-color: #d2d6de ;}
+                                </style>
+                                <tr>
+                                    <td>方案</td> 
+                                   <td>
+                                   <table id="tab" border="1" width="100%" align="center" style="margin-top:20px">
+                                    <tr>
+                                        <!-- <td width="6%">序号</td> -->
+                                        <td>纯租赁/以租代购</td>
+                                        <td>首付</td>
+                                        <td>月供</td>
+                                        <td>押金</td>
+                                        <td>期数</td>
+                                        <td>支持双班</td>
+                                        <td width='8%'>操作</td>
+                                   </tr>
+                                    </table>
+                                    <div class="addbut">
+                                        <input type="button" id="but" class="btn btn-warning" value="增加"/>
+                                    </div>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td id="box"> 状态 </td>
+                                        <td >
+                                            <input type="radio" class='iccontrol' name="status" value="1" title="已审核" checked="checked"><span class="ml10 mr30">已审核</span>
+                                            <input type="radio" class='iccontrol' name="status" value="0" title="未审核"><span class="ml10 mr30">未审核</span>
+                                        </td>
+                                    </tr>
+
+                                    <!-- <tr>
+                                        <td id="box"> 是否删除 </td>
+                                        <td >
+                                            <input type="radio" class='iccontrol' name="isdel" value="0" title="否" checked="checked"><span class="ml10 mr30">否</span>
+                                            <input type="radio" class='iccontrol' name="isdel" value="1" title="是"><span class="ml10 mr30">是</span>
+                                        </td>
+                                    </tr> -->
+
+                                 
+                                    
+                                   
+
+                                    <tr>
+                                        <td class="col-sm-2"></td>
+                                        <td class="col-sm-8 text-right">
+                                            <input class="btn btn-primary" type="submit" lay-submit lay-filter="*" value="保存">
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+</section>
+<script>
+
+$(function(){
+    $('#oneC_id').change(function(){
+        var onec_id = $(this).val();
+        $.post("{:url('getTypeByOnec_id')}",{id:onec_id},function(data){
+            $('#twoC_id option').remove();
+            $('#car_id option').remove();
+            for(var i=0;i<data.length;i++){
+                var id = data[i]['id'];
+                var name = data[i]['name'];
+                $('#twoC_id').append('<option value="'+id+'">'+name+'</option>');
+            }
+           var senecd_id = $('#twoC_id option:selected').val();
+           $.post("{:url('getcarlistBytwo_id')}",{id:senecd_id},function(data){
+                $('#car_id option').remove();
+                for(var i=0;i<data.length;i++){
+                    var id = data[i]['id'];
+                    var title = data[i]['title'];
+                    $('#car_id').append('<option value="'+id+'">'+title+'</option>');
+                }
+            },'json');
+        },'json');
+
+    })
+
+     $('#twoC_id').change(function(){
+        var twoC_id = $(this).val();
+        $.post("{:url('getcarlistBytwo_id')}",{id:twoC_id},function(data){
+            $('#car_id option').remove();
+            for(var i=0;i<data.length;i++){
+                var id = data[i]['id'];
+                var title = data[i]['title'];
+                $('#car_id').append('<option value="'+id+'">'+title+'</option>');
+            }
+        },'json');
+    })
+})
+
+
+
+</script>
+
+
+ <script>
+     $(document).ready(function(){
+         //<tr/>居中
+        $("#tab tr").attr("align","center");
+        
+        //增加<tr/>
+        $("#but").click(function(){
+            var _len = $("#tab tr").length;        
+            $("#tab").append("<tr id="+_len+" align='center'>"
+                                // +"<td>"+_len+"</td>"
+                                +"<td><input type='text' size='5' name='type[]' id='desc"+_len+"' /></td>"
+                                +"<td><input type='text' size='5' name='shoufu[]' id='desc"+_len+"' /></td>"
+                                +"<td><input type='text' size='5' name='yuegong[]' id='desc"+_len+"' /></td>"
+                                +"<td><input type='text' size='5' name='yajin[]' id='desc"+_len+"' /></td>"
+                                +"<td><input type='text' size='5' name='qishu[]' id='desc"+_len+"' /></td>"
+                                +"<td><input type='text' size='5' name='shuangban[]' id='desc"+_len+"' /></td>"
+                                +"<td><a href=\'#\' onclick=\'deltr("+_len+")\'>删除</a></td>"
+                            +"</tr>");            
+        })    
+    })
+    
+    //删除<tr/>
+    var deltr =function(index)
+    {
+        var _len = $("#tab tr").length;
+        $("tr[id='"+index+"']").remove();//删除当前行
+        // for(var i=index+1,j=_len;i<j;i++)
+        // {
+        //     var nextTxtVal = $("#desc"+i).val();
+        //     $("tr[id=\'"+i+"\']")
+        //         .replaceWith("<tr id="+(i-1)+" align='center'>"
+        //                         +"<td>"+(i-1)+"</td>"
+        //                         +"<td><input type='text' size='5' name='shoufu[]' id='desc"+(i-1)+"' /></td>"
+        //                         +"<td><input type='text' size='5' name='yuegong[]' id='desc"+(i-1)+"' /></td>"
+        //                         +"<td><input type='text' size='5' name='yajin[]' id='desc"+(i-1)+"' /></td>"
+        //                         +"<td><input type='text' size='5' name='qishu[]' id='desc"+(i-1)+"' /></td>"
+        //                         +"<td><input type='text' size='5' name='shuangban[]' id='desc"+(i-1)+"' /></td>"
+                                
+        //                         +"<td><a href=\'#\' onclick=\'deltr("+(i-1)+")\'>删除</a></td>"
+        //                     +"</tr>");
+        // }    
+        
+    }
+</script>
+
+{/block} 
+
+
+
+
+
+
+
+
+

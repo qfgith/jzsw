@@ -1,0 +1,57 @@
+{extend name="base" /}
+{block name="body"}
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info info_box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">网站概览</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <!--表单数据-->
+                    <div class="tab-content col-md-10">                       
+                        <div class="tab-pane active" id="tab_tongyong">                           
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td class="col-sm-2">网站域名</td>
+                                    <td class="col-sm-8">{$config.url}</td>
+                                </tr>
+                                <tr>
+                                    <td>网站目录</td>
+                                    <td>{$config.document_root}</td>
+                                </tr>
+                                <tr>
+                                    <td>服务器操作系统</td>
+                                    <td>{$config.server_os}</td>
+                                </tr>
+                                <tr>
+                                    <td>服务器端口</td>
+                                    <td>{$config.server_port}</td>
+                                </tr>
+                                <tr>
+                                    <td>服务器环境</td>
+                                    <td>{$config.server_soft}</td>
+                                </tr>
+                                <tr>
+                                    <td>PHP版本</td>
+                                    <td>{$config.php_version}</td>
+                                </tr>
+                                <tr>
+                                    <td>MySQL版本</td>
+                                    <td>{$config.mysql_version}</td>
+                                </tr>
+                                <tr>
+                                    <td>最大上传限制</td>
+                                    <td>{$config.max_upload_size}</td>
+                                </tr>
+                            </table>
+                        </div>                           
+                    </div>              
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+{/block}

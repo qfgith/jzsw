@@ -1,0 +1,99 @@
+
+{extend name="base" /}
+{block name="body"} 
+<!-- Main content -->
+<section class="content">
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+        <div class="info_box">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">详细信息</h3>
+                    </div>
+                    <form id="form1" method="post" action="{:url('admin/category/update')}">
+                        <input type="hidden" name="id" value="{$category['id']}" />
+                        <div class="panel mt20">
+                            <div class="panel-body">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td id="box">上级栏目</td>
+                                        <td >
+                                             <select name="pid" lay-verify="required" class='col-sm-4 form-control select2'>
+                                                <option value="0">--无--</option>
+                                                {foreach name="category_level_list" item="vo"}
+                                                <option value="{$vo.id}" {if condition="$pid==$vo.id"} selected="selected"{/if}>{neq name="vo.level" value="1"}|{php}for($i=1;$i<$vo['level'];$i++){echo ' ----';}{/php}{/neq} {$vo.name}</option>
+                                                {/foreach}
+                                            </select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td id="box">栏目名称</td>
+                                        <td >
+                                            <input type="text" name="name" value="{$category['name']}" required  lay-verify="required" placeholder="请输入栏目名称" class="form-control">
+                                        </td>
+                                    </tr>
+
+                                    <!-- <tr>
+                                        <td id="box">类型</td>
+                                        <td >
+                                           <select name="type" lay-verify="required" class='col-sm-4 form-control select2'>
+                                               <option value="1" {if condition="$category.type==1"} selected="selected"{/if}>列表</option>
+                                                <option value="2" {if condition="$category.type==2"} selected="selected"{/if}>单页</option>
+                                            </select>
+                                        </td>
+                                    </tr> -->
+                                    <tr>
+                                        <td id="box">别名</td>
+                                        <td >
+                                            <input type="text" name="alias" value="{$category.alias}" placeholder="（选填）请输入栏目别名" class="form-control">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="box"> 略缩图 </td>
+                                        <td >
+                                            <input type="text" name="thumb" value="{$category.thumb}" id="img" size="50" class="layui-input input-text">
+                                            <button type="button" class="btn btn-primary layui_upimage">上传图片</button>
+                                            <img src="{$category.thumb}" class="th1_img imgh">
+                                        </td>
+                                    </tr>
+
+                                     <tr>
+                                        <td id="box"> 栏目介绍 </td>
+                                        <td >
+                                            <textarea class="form-control" name="content" rows="3"></textarea>
+                                        </td>
+                                    </tr>
+                                 
+                                    
+                                   
+
+                                    <tr>
+                                        <td class="col-sm-2"></td>
+                                        <td class="col-sm-8 text-right">
+                                            <input class="btn btn-primary" type="submit" lay-submit lay-filter="*" value="保存">
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+</section>
+
+{/block} 
+
+
+
+
+
+

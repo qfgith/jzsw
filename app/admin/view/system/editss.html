@@ -1,0 +1,67 @@
+{extend name="base" /}
+{block name="body"}
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info info_box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">图片信息</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <!--表单数据-->
+                    <form method="post" id="adminHandle" action="">
+                    {if condition="$info['id'] neq 0"}<input type="hidden" name="id" value="{$info.id}">{/if}
+                    <div class="tab-content col-md-12">                       
+                        <div class="tab-pane active" id="pengyouquan">    
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td class="col-sm-2">名称：</td>
+                                    <td class="col-sm-10">
+                                        <input type="text" class="form-control w400" name="name" value="{$info.name}" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>图片：</td>
+                                    <td>
+                                        <input type="text" name="img" value="{$info.img}" size="50" class="layui-input input-text">
+                                        <button type="button" class="btn btn-primary layui_upimage">上传图片</button>
+                                        {empty name="info.img"}<img src="" class="th1_img imgh">{else/}<img src="{$cdomain}{$info.img}" class="th1_img imgb">{/empty}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>链接：</td>
+                                    <td>
+                                        <input type="text" class="form-control w400" name="link" value="{$info.link}" >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> 状态 </td>
+                                    <td >
+                                        <input type="radio" class='iccontrol' name="status" value="1" {if condition="$info['status'] eq 1"}checked{/if}><span class="ml10 mr30">显示</span>
+                                        <input type="radio" class='iccontrol' name="status" value="0" {if condition="$info['status'] eq 0"}checked{/if}><span class="ml10 mr30">隐藏</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <!-- <input type="submit" class="btn btn-primary" value="submit"> -->
+                                        <button class="btn btn-primary" lay-submit lay-filter="*" >保存</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>                           
+                    </div>              
+                    </form><!--表单数据-->
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+<script>
+$(function(){
+    // location.reload();
+})
+</script>
+{/block}

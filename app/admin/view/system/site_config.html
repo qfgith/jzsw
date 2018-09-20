@@ -1,0 +1,54 @@
+{extend name="base" /}
+{block name="body"}
+<!-- Main content -->
+<section class="content">
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+        <div class="info_box">
+            <div class="col-md-12">
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">站点信息</h3>
+                    </div>
+                    <form id="form1" method="post" action="">
+                        <div class="panel mt20">
+                            <div class="panel-body">
+                                <table class="table table-bordered">
+                                    {volist name="list" id="vo"}
+                                        {switch name="vo.type"}
+                                            {case value="1"}
+                                                <tr>
+                                                    <td>{$vo.meta_desc}：</td>
+                                                    <td>
+                                                        <textarea rows="4" cols="60" class="form-control" id="{$vo.meta_key}" name="{$vo.meta_key}" placeholder="{$vo.meta_desc}">{$vo.meta_value}</textarea>
+                                                    </td>
+                                                </tr>
+                                            {/case}
+                                            {default /}
+                                                <tr>
+                                                    <td class="col-sm-2">{$vo.meta_desc}：</td>
+                                                    <td>
+                                                        <input type="text" name="{$vo.meta_key}" value="{$vo.meta_value}" class="form-control" placeholder="{$vo.meta_desc}">
+                                                    </td>
+                                                </tr>
+                                        {/switch}
+                                    {/volist}
+                                    <tr>
+                                        <td class="col-sm-2"></td>
+                                        <td class="col-sm-8 text-right">
+                                            <button class="layui-btn btn btn-primary" lay-submit lay-filter="*" >保存</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+</section>
+{/block}

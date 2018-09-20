@@ -1,0 +1,61 @@
+{extend name="base" /}
+{block name="body"}
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">后台菜单</h3>
+                    <div class="form-group pull-right">
+                        <a href="{:url('admin/menu/add')}" class="btn btn-default">添加菜单</a>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <form id="myform" name="myform" action="{:url('admin/menu/listorder')}" method="post">
+                            <table class="table no-margin">
+                                <thead>
+                                    <tr role="row">
+                                        <th class="text-center" width="40">排序</th>
+                                        <th class="text-center">ID</th>
+                                        <th>菜单名称</th>
+                                        <th>控制器方法</th>
+                                        <th>状态</th>
+                                        <th>操作</th>
+                                   </tr>
+                                </thead>
+                                <tbody>
+                                    {foreach name="admin_menu_level_list" item="vo"}
+                                    <tr>
+                                        <td class="text-center">
+                                            <input name='sort[{$vo.id}]' type='text' size='3' value='{$vo.sort}' class='text-center'>
+                                        </td>
+                                        <td class="text-center">{$vo.id}</td>
+                                        <td>{neq name="vo.level" value="1"}|{php}for($i=1;$i<$vo['level'];$i++){echo ' ----';}{/php}{/neq} {$vo.title}</td>
+                                        <td>{$vo.name}</td>
+                                        <td>{php}echo $vo['status']==1 ? '<label class="btn btn-sm btn-success">显示</label>' : '<label class="btn btn-sm btn-danger">隐藏</label>';{/php}</td>
+                                        <td>
+                                            <a href="{:url('admin/menu/add',['pid'=>$vo['id']])}" class="btn btn-sm btn-warning">添加子菜单</a>
+                                            <a href="{:url('admin/menu/edit',['id'=>$vo['id']])}" class="btn btn-sm btn-primary">编辑</a>
+                                            <a href="{:url('admin/menu/delete',['id'=>$vo['id']])}" onclick="return confirm('确定删除吗?')" class="btn btn-sm btn-danger">删除</a>
+                                        </td>
+                                    </tr>
+                                    {/foreach}
+                                    <tr>
+                                        <td colspan="6">
+                                            <!-- <input type="submit" value="排序"> -->
+                                            <button class="btn btn-primary" lay-submit lay-filter="*" >排序</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+{/block}

@@ -1,0 +1,72 @@
+{extend name="base" /}
+{block name="body"}
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">返佣记录</h3>
+                </div>
+                <!-- search -->
+                <div class="panel-body mb0">
+                    <div class="navbar navbar-default mb0">
+                        <form class="navbar-form form-inline" method="post" action="{:url('admin/user/backm')}">
+                            <div class="form-group">
+                                <label class="control-label">用户名:</label>
+                                <div class="input-group">
+                                    <input class="form-control input-sm" name="uname" value="{$uname}" type="text" >
+                                </div>
+                                <label class="control-label">订单编号:</label>
+                                <div class="input-group">
+                                    <input class="form-control input-sm" name="ordersn" value="{$ordersn}" type="text" >
+                                </div>
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fa fa-search"></i> 筛选
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <table class="table no-margin">
+                            <thead>
+                                <tr role="row">
+                                    <th>ID</th>
+                                    <th>用户名</th>
+                                    <th>关联订单</th>
+                                    <th>返佣积分</th>
+                                    <th>返佣类型</th>
+                                    <th>描述</th>
+                                    <th>返现时间</th>
+                               </tr>
+                            </thead>
+                            <tbody>
+                                {foreach name="list" item="vo" key="k"}
+                                    <tr role="row">
+                                        <td>{$vo.id}</td>
+                                        <td>{$vo.uname}</td>
+                                        <td>{$vo.order_sn}</td>
+                                        <td>{$vo.money}</td>
+                                        <td>{if condition="$vo['type'] eq 4"}<label class="btn btn-sm btn-success">酒吧返佣</label>{else/}<label class="btn btn-sm btn-danger">商城返佣</label>{/if}</td>
+                                        <td>{$vo.addtime|date="Y-m-d H:s",###}</td>
+                                    </tr>
+                                {/foreach}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="box-footer clearfix">
+                    <ul class="pagination pagination-sm pull-right">
+                        {$pages}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+</section>
+{/block}

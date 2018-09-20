@@ -1,0 +1,57 @@
+{extend name="base" /}
+{block name="body"}
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info info_box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">语言信息</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <!--表单数据-->
+                    <form method="post" id="adminHandle" action="">
+                    {if condition="$info['id'] neq 0"}<input type="hidden" name="id" value="{$info.id}">{/if}
+                    <div class="tab-content col-md-12">                       
+                        <div class="tab-pane active" id="pengyouquan">    
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td class="col-sm-2">标识：</td>
+                                    <td class="col-sm-10">
+                                        <input type="text" class="form-control w320" name="meta_key" value="{$info.meta_key}" style="width: 365px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-2" rowspan="{$rnum}">值：</td>
+                                </tr>
+                                {volist name="llist" id="vo"}
+                                <tr>
+                                    <td class="col-sm-10">
+                                        {$vo.name}：
+                                        <input type="text" class="form-control w320" name="{$vo.val2}" value="{$info.meta_value|get_kval_by_json=###,$vo.val2}" >
+                                    </td>
+                                </tr>
+                                {/volist}
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <!-- <input type="submit" class="btn btn-primary" value="submit"> -->
+                                        <button class="btn btn-primary" lay-submit lay-filter="*" >保存</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>                           
+                    </div>              
+                    </form><!--表单数据-->
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+<script>
+$(function(){
+    // location.reload();
+})
+</script>
+{/block}

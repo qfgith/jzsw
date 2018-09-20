@@ -1,0 +1,43 @@
+{extend name="base" /}
+{block name="body"}
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info info_box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">群成员</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <!--表单数据-->
+                    <div class="tab-content col-md-12">                       
+                        <div class="tab-pane active" id="tab_tongyong">    
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td class="col-sm-3" rowspan="{$count}" colspan="2">{$info.note_name}<br>(共{$count-1}个成员)</td>
+                                    
+                                </tr>
+                                {volist name="list" id="vo" key="k"}
+                                {if condition="($k%2 == 1)"}  
+                                <tr>
+                                {/if}
+                                    <td>
+                                        <img class="img-circle w50" src="{$vo.wx_headpic}">
+                                        {$vo.user_name}                         
+                                    </td>
+                                    {if condition="($k%2 == 1)&&($k==($count-1))"}<td></td>{/if}
+                                {if condition="($k%2 == 0)||($k==($count-1))"}
+                                </tr>
+                                {/if}
+                                {/volist}
+                            </table>
+                        </div>                           
+                    </div>              
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+
+{/block}

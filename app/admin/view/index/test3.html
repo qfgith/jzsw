@@ -1,0 +1,59 @@
+{extend name="base" /}
+{block name="body"}
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info info_box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">test3---layui_v2.3.0</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <!--表单数据-->
+                    <form method="post" id="adminHandle" action="">
+                    <div class="tab-content col-md-12">                       
+                        <div class="tab-pane active" id="tab_tongyong">                           
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>单图</td>
+                                    <td>
+                                        <input type="text" id="eimg" name="eimg" value="" size="40" class="layui-input input-text">
+                                        <button type="button" class="layui-btn layui_upimage" >上传图片</button>
+                                        <img src="" class="th1_img imgh" style="max-width: 50px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>多图</td>
+                                    <td>
+                                        <div class="layui-upload">
+                                            <button type="button" class="layui-btn layui_upimages" barno="bar123">多图片上传</button> 
+                                            <div class="layui-upload-list"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-sm-2"></td>
+                                    <td>
+                                        <button class="layui-btn" lay-submit lay-filter="*">更新</button>
+                                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                                        <!-- <input type="submit" class="btn btn-primary" value="submit"> -->
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                        </div>                           
+                    </div>              
+                    </form>
+                    <!--表单数据-->
+
+                    <div class="tab-content col-md-12">
+                        <button type="button" class="layui-btn ajax-action" data-action="{:url('admin/index/test2')}">审核</button>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+{/block}

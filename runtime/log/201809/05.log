@@ -1,0 +1,80 @@
+[ 2018-09-05T13:06:02+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] www.gongxin.com/ [运行时间：0.289437s][吞吐率：3.45req/s] [内存消耗：3,203.02kb] [文件加载：51]
+[ info ] [ LANG ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.gongxin.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.33 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\home\controller\Index->index[ E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com\app\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\lwl\phpstudy\PHPTutorial\WWW\gongxin.com/app/home\view\index.html [ array (
+  0 => 'webset',
+  1 => 'search_link',
+  2 => 'keyword',
+  3 => 'uinfo',
+  4 => 'curl',
+  5 => 'ccurl',
+  6 => 'pagenavs',
+  7 => 'categorynavs',
+  8 => 'about',
+  9 => 'service',
+  10 => 'news',
+  11 => 'contacts',
+  12 => 'cdomain',
+  13 => 'ishome',
+  14 => 'slide_index',
+  15 => 'aboutintro',
+  16 => 'pos_team',
+  17 => 'anli_nav',
+  18 => 'pos_news',
+  19 => 'site_title',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

@@ -1,0 +1,47 @@
+{extend name="base" /}
+{block name="body"}
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">系统日志</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <table class="table no-margin">
+                            <thead>
+                                <tr role="row">
+                                   <th class="text-center">用户ID</th>
+                                   <th>真实姓名</th>
+                                   <th>日志记录</th>
+                                   <th>登录ip</th>
+                                   <th>时间</th>
+                               </tr>
+                            </thead>
+                            <tbody>
+                                {foreach name="list" item="vo" key="k"}
+                                <tr role="row">
+                                    <td class="text-center">{$vo.admin_id}</td>
+                                    <td>{$vo.uname}</td>
+                                    <td>{$vo.log_info}</td>
+                                    <td>{$vo.log_ip}</td>
+                                    <td>{$vo.log_time|date="Y-m-d H:i:s",###}</td>
+                                </tr>
+                                {/foreach}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="box-footer clearfix">
+                    <ul class="pagination pagination-sm pull-right">
+                        {$pages}
+                    </ul>
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+{/block}

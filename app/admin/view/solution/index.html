@@ -1,0 +1,111 @@
+{extend name="base" /}
+{block name="body"}    
+<!-- Main content -->
+<section class="content">
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">方案列表</h3>
+                </div>
+                <!-- search -->
+                <div class="panel-body mb0">
+                    <div class="navbar navbar-default mb0">
+                        <form class="navbar-form form-inline" method="post" action="">
+                            <div class="form-group">
+                                 
+                                <select name="com_id" class='form-control valid'>
+                                    <option value="0" {if $com_id==0}selected{/if}>--所属公司--</option>
+                                    {foreach name="all_companymes" item="vo"}
+                                    <option value="{$vo.id}" {if $com_id==$vo['id']}selected{/if}>{$vo.title}</option>
+                                    {/foreach}
+                                </select>
+
+                                <select name="oneC_id" class='form-control valid'>
+                                    <option value="0" {if $com_id==0}selected{/if}>--所属分类--</option>
+                                    {foreach name="one_car_nav" item="vo"}
+                                    <option value="{$vo.id}" {if $oneC_id==$vo['id']}selected{/if}>{$vo.name}</option>
+                                    {/foreach}
+                                </select>
+
+                                <input class="input-sm" placeholder="具体车型" type="text" name='carname' value="{$carname}" />
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fa fa-search"></i> 筛选
+                                </button>
+
+                            </div>
+
+                            <a href='{:url("Admin/Solution/add")}' class="btn btn-info pull-right">添加方案</a>
+                        </form>
+                    </div>
+                </div>
+                <!-- table -->
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <form id="myform" name="myform" action='{:url("Admin/Solution/listorder")}' method="post">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">排序</th>
+                                    <th>编号/ID</th>
+                                    <th>所属公司</th>
+                                    <th>所属分类</th>
+                                    <th>车型</th>
+                                    <th>是否显示</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                
+                                
+                                {volist name='article_list' id='vo'}
+                                <tr>
+                                    <td width="40">
+                                        <input name="sort[{$vo['id']}]" type="text" size="3" value="{$vo['sort']}" class="text-center">
+                                    </td>
+                                    <td>
+                                        <a href='{:url("Admin/Solution/edit",["id"=>$vo["id"]])}'>{$vo['id']}</a>
+                                    </td>
+                                    <td>{$comlist_n[$vo['com_id']]['title']}</td>
+                                    <td>{$category_nav[$vo['oneC_id']]['name']}</td>
+                                    <td>{$vo['cartit']}</td>
+                                    
+                                    <td>
+                                      {eq name="vo['isdel']" value="0"}
+                                        <span class="label label-success">显示</span>
+                                        {else/}
+                                        <span class="label label-danger">隐藏</span>
+                                      {/eq}
+                                    </td>
+                                    <td>
+                                        <a href='{:url("Admin/Solution/edit",["id"=>$vo["id"]])}' class="btn btn-xs btn-primary">编辑</a>
+                                        <a href='{:url("Admin/Solution/delete",["id"=>$vo["id"]])}' onclick="return confirm('确定删除吗?')" lay-filter="*" class="btn btn-xs btn-danger">删除</a>
+                                    </td>
+                          
+                                </tr>
+                                {/volist}
+
+                                <tr>
+                                    <td colspan="9">
+                                        <input class="btn btn-sm btn-primary" lay-submit lay-filter="*" type="submit" value="排序" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </form>
+                    </div>
+                <!--分页-->
+                    {$article_list->render()}
+                    <!-- /.table-responsive --> 
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- /.row -->
+</section>
+
+{/block}

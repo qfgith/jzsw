@@ -1,0 +1,79 @@
+
+
+{extend name="base" /}
+{block name="body"}    
+<!-- Main content -->
+<section class="content">
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">栏目管理</h3>
+                </div>
+                <!-- search -->
+                <div class="panel-body mb0">
+                    <div class="navbar navbar-default mb0">
+                        <form class="navbar-form form-inline" method="post" action="">
+                            
+                            <if condition="$moduleid neq 3"><a href='{:url("admin/page_service_category/add")}' class="btn btn-info pull-right">添加栏目</a></if>
+                        </form>
+                    </div>
+                </div>
+                <!-- table -->
+                <div class="box-body">
+                    <div class="table-responsive">
+                        <form id="myform" name="myform" action='{:url("Admin/page_service_category/listorder")}' method="post">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <!-- <th class="text-center">排序</th> -->
+                                    <th style="width: 70px;">排序</th>
+                                    <th style="width: 70px;">ID</th>
+                                    
+                                    <th>栏目名称</th>
+                                    <th>操作</th>
+                                    <th>内容</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                
+                                
+                                {volist name='category_level_list' id='vo'}
+                                <tr>
+                                    <td>
+                                        <input name="sort[{$vo.id}]" type="text" size="3" value="{$vo.sort}" attr='{$vo.pid}' class="text-center">
+                                        <input type="hidden" name="sort1[{$vo.id}]" value="{$vo.pid}">
+                                    </td>
+                                    <td>{$vo.id}</td>
+                                    <td>{neq name="vo.level" value="1"}|{php}for($i=1;$i<$vo['level'];$i++){echo ' ----';}{/php}{/neq} {$vo.name}</td>
+                                    <td>
+                                        <!-- <a href="{:url('admin/page_service_category/add',['pid'=>$vo['id']])}" class="btn btn-warning">添加子栏目</a> -->
+                                        <a href="{:url('admin/page_service_category/edit',['id'=>$vo['id']])}" class="btn btn-primary">编辑</a>
+                                        <a href="{:url('admin/page_service_category/delete',['id'=>$vo['id']])}" onclick="return delfun(this)" class="btn btn-danger btn-mini">删除</a>
+                                    </td>
+                                    <td><a href="{:url('admin/PageServiceCategory/edit_page',['id'=>$vo['id']])}" class="btn btn-primary">编辑内容</a></td>
+                                </tr>
+                                {/volist}
+
+                                  <tr>
+                                    <td colspan="9">
+                                        <input class="btn btn-sm btn-primary" lay-submit lay-filter="*" type="submit" value="排序" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- /.row -->
+</section>
+
+{/block}

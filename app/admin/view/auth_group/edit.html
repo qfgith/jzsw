@@ -1,0 +1,105 @@
+{extend name="base" /}
+{block name="body"}
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info info_box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">权限组信息</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <!--表单数据-->
+                    <form method="post" id="roleform" action="{:url('admin/auth_group/update')}" onsubmit="return roleSubmit()">
+                    <input type="hidden" name="id" value="{$info.id}">
+                    <div class="tab-content col-md-10">                       
+                        <div class="tab-pane active" id="tab_tongyong">                           
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td class="col-sm-2">名称：</td>
+                                    <td class="col-sm-8">
+                                        <input type="text" name="title" class="form-control" value="{$info.title}">
+                                    </td>
+                                </tr>  
+                                <tr>
+                                    <td>状态：</td>
+                                    <td>
+                                        <input type="radio" name="status" value="1" {if condition="$info['status'] == 1"}checked{/if} ><span class="ml10 mr30">启用</span>
+                                        <input type="radio" name="status" value="0" {if condition="$info['status'] == 0"}checked{/if} ><span class="ml10 mr30">禁用</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>权限分配：</b></td>
+                                    <td>
+                                        <input type="checkbox" onclick="choosebox(this)"><b>全选</b>                         
+                                    </td>
+                                </tr>
+                                {foreach name="modules" item="menu" key="kk"}           
+                                    <tr>
+                                        <td class="title left" style="padding-right:50px;">
+                                            <b>{$agroup[$kk]}：</b>
+                                        </td>
+                                        <td>
+                                            <label class="right"><input type="checkbox" value="1" cka="mod-{$kk}">全选</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <ul class="group-list">
+                                            {foreach name="menu" item="vv"}
+                                                <li><input type="checkbox" name="right[]" value="{$vv.id}" {if condition="$vv.enable eq 1"}checked{/if} ck="mod-{$kk}">{neq name="vv.level" value="1"}|{php}for($i=1;$i<$vv['level'];$i++){echo ' ----';}{/php}{/neq}<label>{$vv.title}</label></li>
+                                            {/foreach}
+                                            <div class="clear-both"></div>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                {/foreach}
+
+                                <tr>
+                                    <td></td>
+                                    <td class="text-right">
+                                        <button class="btn btn-primary" lay-submit lay-filter="*">保存</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>                           
+                    </div>              
+                    </form><!--表单数据-->
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(":checkbox[cka]").click(function(){
+        var $cks = $(":checkbox[ck='"+$(this).attr("cka")+"']");
+        if($(this).is(':checked')){
+            $cks.each(function(){$(this).prop("checked",true);});
+        }else{
+            $cks.each(function(){$(this).removeAttr('checked');});
+        }
+    });
+});
+
+function choosebox(o){
+    var vt = $(o).is(':checked');
+    if(vt){
+        $('input[type=checkbox]').prop('checked',vt);
+    }else{
+        $('input[type=checkbox]').removeAttr('checked');
+    }
+}
+
+function roleSubmit(){
+    if($('#title').val() == '' ){
+        alert('名称不能为空');
+        return false;
+    }
+    $('#roleform').submit();
+}
+</script>
+{/block}
+
